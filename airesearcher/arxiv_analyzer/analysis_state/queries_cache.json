@@ -1,0 +1,39 @@
+{
+  "84bbff4c": [
+    {
+      "strategy": "Broad Overview",
+      "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")",
+      "max_results": 3
+    },
+    {
+      "strategy": "Focused Search",
+      "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")",
+      "max_results": 3
+    },
+    {
+      "strategy": "Architecture/Methodology Search",
+      "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")",
+      "max_results": 3
+    },
+    {
+      "strategy": "Benchmark/Dataset Search",
+      "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")",
+      "max_results": 3
+    },
+    {
+      "strategy": "Review Search",
+      "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")",
+      "max_results": 3
+    },
+    {
+      "strategy": "Architecture/Methodology Search",
+      "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")",
+      "max_results": 3
+    },
+    {
+      "strategy": "Focused Search",
+      "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")",
+      "max_results": 3
+    }
+  ]
+}

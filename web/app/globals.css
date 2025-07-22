@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #00ff00;
+  --green-primary: #00ff00;
+  --green-secondary: #00cc00;
+  --green-dark: #008800;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #00ff00;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+/* Pixel text effect */
+.pixel-text {
+  text-shadow: 
+    1px 1px 0px #00ff00,
+    2px 2px 0px #00cc00,
+    3px 3px 0px #008800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Pixel avatar effect */
+.pixel-avatar {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+  box-shadow: 
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 15px #00ff00;
+}
+
+/* Pixel button effect */
+.pixel-button {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 0, 0.3),
+    inset 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+.pixel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 5px 15px rgba(0, 255, 0, 0.4),
+    0 0 20px rgba(0, 255, 0, 0.3),
+    inset 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.pixel-button:active {
+  transform: translateY(0px);
+}
+
+/* Glowing border animation */
+@keyframes glow-border {
+  0%, 100% {
+    border-color: #00ff00;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    border-color: #00cc00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  }
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 
+      0 0 5px #00ff00,
+      0 0 10px #00ff00,
+      0 0 15px #00ff00;
+  }
+  100% {
+    box-shadow: 
+      0 0 10px #00ff00,
+      0 0 20px #00ff00,
+      0 0 30px #00ff00;
+  }
+}
+
+/* Matrix-like background effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 255, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(0, 255, 0, 0.3);
+  color: #00ff00;
+}
+
+/* Input focus glow */
+input:focus, textarea:focus {
+  animation: glow-border 2s ease-in-out infinite alternate;
+}
+
+/* Message appear animation */
+@keyframes message-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-bubble {
+  animation: message-appear 0.3s ease-out;
+}
+
+/* Terminal cursor effect */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.terminal-cursor::after {
+  content: '█';
+  animation: blink 1s infinite;
+  color: #00ff00;
+}

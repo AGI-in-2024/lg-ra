@@ -1,0 +1,17 @@
+# Зависимости для модуля анализа arXiv статей
+
+# OpenAI compatibility для Gemini API
+openai>=1.35.0
+
+# Для работы с HTTP запросами (arXiv API)
+aiohttp>=3.9.0
+
+# Pydantic для валидации данных и structured output
+pydantic>=2.7.0
+
+# Для работы с XML (парсинг ответов arXiv)
+# (xml.etree.ElementTree входит в стандартную библиотеку)
+
+# Дополнительные утилиты
+python-dateutil>=2.8.0
+typing-extensions>=4.0.0 

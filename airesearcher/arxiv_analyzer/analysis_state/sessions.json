@@ -1,0 +1,261 @@
+[
+  {
+    "session_id": "20250721_132440",
+    "timestamp": "2025-07-21T13:24:40.321272",
+    "task_description_hash": "84bbff4c",
+    "queries": [
+      {
+        "strategy": "Broad Overview",
+        "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+      },
+      {
+        "strategy": "Benchmark/Dataset Search",
+        "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+      },
+      {
+        "strategy": "Review Search",
+        "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+      }
+    ],
+    "total_papers_found": 9,
+    "completed": true
+  },
+  {
+    "session_id": "20250721_133101",
+    "timestamp": "2025-07-21T13:31:01.380187",
+    "task_description_hash": "84bbff4c",
+    "queries": [
+      {
+        "strategy": "Broad Overview",
+        "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+      },
+      {
+        "strategy": "Benchmark/Dataset Search",
+        "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+      },
+      {
+        "strategy": "Review Search",
+        "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+      }
+    ],
+    "total_papers_found": 0,
+    "completed": false
+  },
+  {
+    "session_id": "20250721_133210",
+    "timestamp": "2025-07-21T13:32:10.783198",
+    "task_description_hash": "84bbff4c",
+    "queries": [
+      {
+        "strategy": "Broad Overview",
+        "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+      },
+      {
+        "strategy": "Benchmark/Dataset Search",
+        "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+      },
+      {
+        "strategy": "Review Search",
+        "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+      }
+    ],
+    "total_papers_found": 9,
+    "completed": true
+  },
+  {
+    "session_id": "20250721_134145",
+    "timestamp": "2025-07-21T13:41:45.935529",
+    "task_description_hash": "84bbff4c",
+    "queries": [
+      {
+        "strategy": "Broad Overview",
+        "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+      },
+      {
+        "strategy": "Benchmark/Dataset Search",
+        "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+      },
+      {
+        "strategy": "Review Search",
+        "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+      }
+    ],
+    "total_papers_found": 9,
+    "completed": true
+  },
+  {
+    "session_id": "20250721_134605",
+    "timestamp": "2025-07-21T13:46:05.205136",
+    "task_description_hash": "84bbff4c",
+    "queries": [
+      {
+        "strategy": "Broad Overview",
+        "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+      },
+      {
+        "strategy": "Benchmark/Dataset Search",
+        "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+      },
+      {
+        "strategy": "Review Search",
+        "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+      }
+    ],
+    "total_papers_found": 9,
+    "completed": true
+  },
+  {
+    "session_id": "20250721_134816",
+    "timestamp": "2025-07-21T13:48:16.715226",
+    "task_description_hash": "84bbff4c",
+    "queries": [
+      {
+        "strategy": "Broad Overview",
+        "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+      },
+      {
+        "strategy": "Benchmark/Dataset Search",
+        "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+      },
+      {
+        "strategy": "Review Search",
+        "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+      }
+    ],
+    "total_papers_found": 0,
+    "completed": false
+  },
+  {
+    "session_id": "20250721_134844",
+    "timestamp": "2025-07-21T13:48:44.831009",
+    "task_description_hash": "84bbff4c",
+    "queries": [
+      {
+        "strategy": "Broad Overview",
+        "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+      },
+      {
+        "strategy": "Benchmark/Dataset Search",
+        "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+      },
+      {
+        "strategy": "Review Search",
+        "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+      },
+      {
+        "strategy": "Architecture/Methodology Search",
+        "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+      },
+      {
+        "strategy": "Focused Search",
+        "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+      }
+    ],
+    "total_papers_found": 9,
+    "completed": true
+  }
+]

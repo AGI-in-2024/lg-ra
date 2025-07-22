@@ -1,0 +1,14 @@
+{
+  "e6bb276a": [
+    {
+      "strategy": "Broad Overview",
+      "query": "test query 1",
+      "max_results": 5
+    },
+    {
+      "strategy": "Focused Search",
+      "query": "test query 2",
+      "max_results": 5
+    }
+  ]
+}

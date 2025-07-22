@@ -1,0 +1,285 @@
+{
+  "timestamp": "2025-07-21T13:49:20.588923",
+  "session_id": "20250721_134844",
+  "duration_seconds": 35.75816607475281,
+  "incremental_mode": false,
+  "statistics": {
+    "queries_generated": 7,
+    "papers_found": 9,
+    "papers_analyzed": 9,
+    "total_papers_in_ranking": 9,
+    "valid_analyses": 9
+  },
+  "queries": [
+    {
+      "strategy": "Broad Overview",
+      "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+    },
+    {
+      "strategy": "Focused Search",
+      "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+    },
+    {
+      "strategy": "Architecture/Methodology Search",
+      "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+    },
+    {
+      "strategy": "Benchmark/Dataset Search",
+      "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+    },
+    {
+      "strategy": "Review Search",
+      "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"knowledge discovery\" AND \"trend analysis\")"
+    },
+    {
+      "strategy": "Architecture/Methodology Search",
+      "query": "all:(\"self-correction\" OR \"self-refinement\" OR \"iterative improvement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific tasks\")"
+    },
+    {
+      "strategy": "Focused Search",
+      "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+    }
+  ],
+  "ranking_summary": {
+    "total": 9,
+    "top_5_avg_score": 0.2996875,
+    "categories_analysis": {
+      "prioritization": 1.45,
+      "validation": 2.95,
+      "architecture": 1.8
+    },
+    "top_paper": {
+      "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+      "score": 0.37968749999999996,
+      "key_insights": [
+        "MLR-Bench provides a structured benchmark for evaluating AI agents in ML research.",
+        "The benchmark includes tasks, an evaluation framework (MLR-Judge), and a modular agent scaffold (MLR-Agent).",
+        "MLR-Judge uses LLM-based reviewers with rubrics, validated by human expert agreement."
+      ]
+    }
+  },
+  "top_papers": [
+    {
+      "rank": 1,
+      "score": 0.38,
+      "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+      "authors": [
+        "Hui Chen",
+        "Miao Xiong",
+        "Yujie Lu"
+      ],
+      "arxiv_id": "2505.19955v2",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "overall_score": 0.5,
+      "key_insights": [
+        "MLR-Bench provides a structured benchmark for evaluating AI agents in ML research.",
+        "The benchmark includes tasks, an evaluation framework (MLR-Judge), and a modular agent scaffold (MLR-Agent).",
+        "MLR-Judge uses LLM-based reviewers with rubrics, validated by human expert agreement."
+      ],
+      "relevance": "This paper is relevant because it introduces a benchmark (MLR-Bench) for evaluating AI agents in machine learning research. While it doesn't directly address prioritization or knowledge gap identifica...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 1 (оценка: 0.38). Умеренная релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2505.19955v2"
+    },
+    {
+      "rank": 2,
+      "score": 0.31,
+      "title": "Dynamic Knowledge Exchange and Dual-diversity Review: Concisely   Unleashing the Potential of a Multi-Agent Research Team",
+      "authors": [
+        "Weilun Yu",
+        "Shixiang Tang",
+        "Yonggui Huang"
+      ],
+      "arxiv_id": "2506.18348v2",
+      "categories": [
+        "cs.AI"
+      ],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Dynamic Knowledge Exchange and Dual-Diversity Review are promising mechanisms for multi-agent research teams.",
+        "The IDVSCI framework outperforms existing systems like AI Scientist and VIRSCI on specific datasets.",
+        "Modeling interaction and peer review dynamics is valuable in LLM-based autonomous research."
+      ],
+      "relevance": "This paper is relevant to our task because it explores multi-agent systems for scientific discovery, focusing on interaction and peer review. The Dynamic Knowledge Exchange mechanism could be adapted ...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 2 (оценка: 0.31). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2506.18348v2"
+    },
+    {
+      "rank": 3,
+      "score": 0.302,
+      "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+      "authors": [
+        "Qiushi Sun",
+        "Zhoumianze Liu",
+        "Chang Ma"
+      ],
+      "arxiv_id": "2505.19897v2",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.HC"
+      ],
+      "overall_score": 0.4,
+      "key_insights": [
+        "ScienceBoard provides a realistic, multi-domain environment for evaluating scientific agents.",
+        "The benchmark includes high-quality, rigorously validated real-world tasks.",
+        "Current state-of-the-art agents achieve only a 15% success rate on the ScienceBoard benchmark, highlighting limitations."
+      ],
+      "relevance": "This paper is relevant because it introduces a benchmark (ScienceBoard) for evaluating autonomous agents in scientific workflows. While it doesn't directly address prioritization or knowledge gap iden...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 3 (оценка: 0.30). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2505.19897v2"
+    },
+    {
+      "rank": 4,
+      "score": 0.269,
+      "title": "Open Source Planning & Control System with Language Agents for   Autonomous Scientific Discovery",
+      "authors": [
+        "Licong Xu",
+        "Milind Sarkar",
+        "Anto I. Lonappan"
+      ],
+      "arxiv_id": "2507.07257v2",
+      "categories": [
+        "cs.AI",
+        "astro-ph.IM",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Multi-agent system with planning and control for scientific tasks.",
+        "Application to a PhD-level cosmology task.",
+        "Superior performance over state-of-the-art LLMs on benchmarks."
+      ],
+      "relevance": "The article presents a multi-agent system for scientific research, which is relevant to our goal of building an autonomous scientific analyst. The planning and control strategy, along with the special...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 4 (оценка: 0.27). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2507.07257v2"
+    },
+    {
+      "rank": 5,
+      "score": 0.238,
+      "title": "Measuring Scientific Capabilities of Language Models with a Systems   Biology Dry Lab",
+      "authors": [
+        "Haonan Duan",
+        "Stephen Zhewen Lu",
+        "Caitlin Fiona Harrigan"
+      ],
+      "arxiv_id": "2507.02083v2",
+      "categories": [
+        "cs.AI"
+      ],
+      "overall_score": 0.4,
+      "key_insights": [
+        "SciGym benchmark provides a valuable environment for evaluating LLMs in scientific tasks.",
+        "The dry lab approach offers a cost-effective way to assess LLMs' experiment design and analysis abilities.",
+        "LLMs struggle with increasing system complexity, indicating areas for improvement."
+      ],
+      "relevance": "This article introduces SciGym, a benchmark for evaluating LLMs in scientific tasks, which is relevant to our goal of building an autonomous scientific analyst. The dry lab approach and focus on exper...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 5 (оценка: 0.24). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2507.02083v2"
+    },
+    {
+      "rank": 6,
+      "score": 0.195,
+      "title": "Biomedical Relation Extraction via Adaptive Document-Relation   Cross-Mapping and Concept Unique Identifier",
+      "authors": [
+        "Yufei Shang",
+        "Yanrong Guo",
+        "Shijie Hao"
+      ],
+      "arxiv_id": "2501.05155v1",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "overall_score": 0.3,
+      "key_insights": [
+        "Use of LLMs for biomedical relation extraction.",
+        "Adaptive Document-Relation Cross-Mapping (ADRCM) for enhanced contextual understanding.",
+        "Concept Unique Identifier (CUI) Retrieval-Augmented Generation (RAG) for enriching document contexts."
+      ],
+      "relevance": "The paper explores using LLMs for biomedical relation extraction, which is relevant to our task of building an autonomous scientific analyst. The ADRCM and CUI RAG techniques could potentially be adap...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 6 (оценка: 0.19). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2501.05155v1"
+    },
+    {
+      "rank": 7,
+      "score": 0.169,
+      "title": "An Outlook on the Opportunities and Challenges of Multi-Agent AI Systems",
+      "authors": [
+        "Fangqiao Tian",
+        "An Luo",
+        "Jin Du"
+      ],
+      "arxiv_id": "2505.18397v2",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.ET",
+        "cs.LG",
+        "68T42 (Agent technology and artificial intelligence), 68T01 (General\n  topics in artificial intelligence), 68M14 (Distributed systems)",
+        "I.2.11; I.2.4; I.2.6"
+      ],
+      "overall_score": 0.25,
+      "key_insights": [
+        "MAS can be a powerful abstraction for signal processing.",
+        "The paper focuses on effectiveness and safety of MAS.",
+        "MAS are increasingly practical due to advances in LLMs and tool-using agents."
+      ],
+      "relevance": "The paper provides a high-level overview of multi-agent systems and their potential benefits and challenges. While it doesn't offer specific algorithms or implementations directly applicable to our ta...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 7 (оценка: 0.17). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2505.18397v2"
+    },
+    {
+      "rank": 8,
+      "score": 0.169,
+      "title": "SciER: An Entity and Relation Extraction Dataset for Datasets, Methods,   and Tasks in Scientific Documents",
+      "authors": [
+        "Qi Zhang",
+        "Zhijia Chen",
+        "Huitong Pan"
+      ],
+      "arxiv_id": "2410.21155v1",
+      "categories": [
+        "cs.CL"
+      ],
+      "overall_score": 0.3,
+      "key_insights": [
+        "SciER dataset focuses on full-text scientific publications, offering a more comprehensive view of entities and relations compared to datasets limited to abstracts.",
+        "The dataset includes fine-grained relation tags to capture intricate interactions among entities.",
+        "The dataset includes an out-of-distribution test set for more realistic evaluation."
+      ],
+      "relevance": "This paper is relevant to our task because it focuses on extracting entities and relations from scientific documents, which is a crucial step in building our autonomous scientific analyst. The dataset...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 8 (оценка: 0.17). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2410.21155v1"
+    },
+    {
+      "rank": 9,
+      "score": 0.13,
+      "title": "Analysing zero-shot temporal relation extraction on clinical notes using   temporal consistency",
+      "authors": [
+        "Vasiliki Kougia",
+        "Anastasiia Sedova",
+        "Andreas Stephan"
+      ],
+      "arxiv_id": "2406.11486v1",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "overall_score": 0.2,
+      "key_insights": [
+        "LLMs struggle with temporal relation extraction in a zero-shot setting for biomedical text.",
+        "Temporal consistency is a significant challenge for LLMs, impacting accuracy.",
+        "Achieving temporal consistency does not guarantee accurate predictions."
+      ],
+      "relevance": "This paper focuses on temporal relation extraction, which is a component of understanding scientific narratives. While the specific task (biomedical text) differs from our focus (longevity), the analy...",
+      "justification": "[AI-анализ]: ## Анализ статей для создания автономного научного аналитика:\n\n**1. MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research**\n\n*   **Значимость:** Предоставляет структурированный бенчм... | Ранг 9 (оценка: 0.13). Низкая релевантность к нашей задаче.",
+      "pdf_url": "http://arxiv.org/pdf/2406.11486v1"
+    }
+  ]
+}

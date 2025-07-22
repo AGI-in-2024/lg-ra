@@ -1,0 +1,187 @@
+[
+  {
+    "session_id": "20250721_132440",
+    "timestamp": "2025-07-21T13:24:44.282249",
+    "total_papers": 18,
+    "top_5": [
+      {
+        "rank": 1,
+        "arxiv_id": "2505.19955v2",
+        "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+        "score": 0.38
+      },
+      {
+        "rank": 2,
+        "arxiv_id": "2505.19897v2",
+        "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+        "score": 0.38
+      },
+      {
+        "rank": 3,
+        "arxiv_id": "2505.18397v2",
+        "title": "An Outlook on the Opportunities and Challenges of Multi-Agent AI Systems",
+        "score": 0.38
+      },
+      {
+        "rank": 4,
+        "arxiv_id": "2501.05155v1",
+        "title": "Biomedical Relation Extraction via Adaptive Document-Relation   Cross-Mapping and Concept Unique Identifier",
+        "score": 0.38
+      },
+      {
+        "rank": 5,
+        "arxiv_id": "2410.21155v1",
+        "title": "SciER: An Entity and Relation Extraction Dataset for Datasets, Methods,   and Tasks in Scientific Documents",
+        "score": 0.38
+      }
+    ]
+  },
+  {
+    "session_id": "20250721_133210",
+    "timestamp": "2025-07-21T13:32:22.198396",
+    "total_papers": 9,
+    "top_5": [
+      {
+        "rank": 1,
+        "arxiv_id": "2505.19955v2",
+        "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+        "score": 0.03
+      },
+      {
+        "rank": 2,
+        "arxiv_id": "2505.19897v2",
+        "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+        "score": 0.03
+      },
+      {
+        "rank": 3,
+        "arxiv_id": "2505.18397v2",
+        "title": "An Outlook on the Opportunities and Challenges of Multi-Agent AI Systems",
+        "score": 0.03
+      },
+      {
+        "rank": 4,
+        "arxiv_id": "2501.05155v1",
+        "title": "Biomedical Relation Extraction via Adaptive Document-Relation   Cross-Mapping and Concept Unique Identifier",
+        "score": 0.03
+      },
+      {
+        "rank": 5,
+        "arxiv_id": "2410.21155v1",
+        "title": "SciER: An Entity and Relation Extraction Dataset for Datasets, Methods,   and Tasks in Scientific Documents",
+        "score": 0.03
+      }
+    ]
+  },
+  {
+    "session_id": "20250721_134145",
+    "timestamp": "2025-07-21T13:41:50.352639",
+    "total_papers": 9,
+    "top_5": [
+      {
+        "rank": 1,
+        "arxiv_id": "2505.19955v2",
+        "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+        "score": 0.03
+      },
+      {
+        "rank": 2,
+        "arxiv_id": "2505.19897v2",
+        "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+        "score": 0.03
+      },
+      {
+        "rank": 3,
+        "arxiv_id": "2505.18397v2",
+        "title": "An Outlook on the Opportunities and Challenges of Multi-Agent AI Systems",
+        "score": 0.03
+      },
+      {
+        "rank": 4,
+        "arxiv_id": "2501.05155v1",
+        "title": "Biomedical Relation Extraction via Adaptive Document-Relation   Cross-Mapping and Concept Unique Identifier",
+        "score": 0.03
+      },
+      {
+        "rank": 5,
+        "arxiv_id": "2410.21155v1",
+        "title": "SciER: An Entity and Relation Extraction Dataset for Datasets, Methods,   and Tasks in Scientific Documents",
+        "score": 0.03
+      }
+    ]
+  },
+  {
+    "session_id": "20250721_134605",
+    "timestamp": "2025-07-21T13:46:33.374436",
+    "total_papers": 9,
+    "top_5": [
+      {
+        "rank": 1,
+        "arxiv_id": "2505.19955v2",
+        "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+        "score": 0.37968749999999996
+      },
+      {
+        "rank": 2,
+        "arxiv_id": "2506.18348v2",
+        "title": "Dynamic Knowledge Exchange and Dual-diversity Review: Concisely   Unleashing the Potential of a Multi-Agent Research Team",
+        "score": 0.36
+      },
+      {
+        "rank": 3,
+        "arxiv_id": "2505.19897v2",
+        "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+        "score": 0.3190625
+      },
+      {
+        "rank": 4,
+        "arxiv_id": "2507.07257v2",
+        "title": "Open Source Planning & Control System with Language Agents for   Autonomous Scientific Discovery",
+        "score": 0.26874999999999993
+      },
+      {
+        "rank": 5,
+        "arxiv_id": "2507.02083v2",
+        "title": "Measuring Scientific Capabilities of Language Models with a Systems   Biology Dry Lab",
+        "score": 0.246875
+      }
+    ]
+  },
+  {
+    "session_id": "20250721_134844",
+    "timestamp": "2025-07-21T13:49:20.583508",
+    "total_papers": 9,
+    "top_5": [
+      {
+        "rank": 1,
+        "arxiv_id": "2505.19955v2",
+        "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+        "score": 0.37968749999999996
+      },
+      {
+        "rank": 2,
+        "arxiv_id": "2506.18348v2",
+        "title": "Dynamic Knowledge Exchange and Dual-diversity Review: Concisely   Unleashing the Potential of a Multi-Agent Research Team",
+        "score": 0.3103125
+      },
+      {
+        "rank": 3,
+        "arxiv_id": "2505.19897v2",
+        "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+        "score": 0.30156249999999996
+      },
+      {
+        "rank": 4,
+        "arxiv_id": "2507.07257v2",
+        "title": "Open Source Planning & Control System with Language Agents for   Autonomous Scientific Discovery",
+        "score": 0.26874999999999993
+      },
+      {
+        "rank": 5,
+        "arxiv_id": "2507.02083v2",
+        "title": "Measuring Scientific Capabilities of Language Models with a Systems   Biology Dry Lab",
+        "score": 0.23812499999999998
+      }
+    ]
+  }
+]

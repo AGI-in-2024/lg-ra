@@ -1,0 +1,220 @@
+{
+  "timestamp": "2025-07-22T10:15:17.793948",
+  "session_id": "20250722_101430",
+  "duration_seconds": 51.27569818496704,
+  "incremental_mode": true,
+  "statistics": {
+    "queries_generated": 7,
+    "papers_found": 12,
+    "papers_analyzed": 12,
+    "total_papers_in_ranking": 55,
+    "valid_analyses": 12
+  },
+  "queries": [
+    {
+      "strategy": "Broad Overview",
+      "query": "all:(\"scientific discovery\" OR \"knowledge discovery\" OR \"scientific literature analysis\" OR \"research trend analysis\") AND all:(\"large language models\" OR \"LLMs\") AND all:(\"autonomous agent\" OR \"AI agent\")"
+    },
+    {
+      "strategy": "Focused Search",
+      "query": "all:(\"knowledge gap detection\" OR \"anomaly detection\" OR \"novelty detection\" OR \"contradiction detection\") AND all:(\"scientific research\" OR \"biomedical research\" OR \"longevity research\") AND all:(\"LLM\" OR \"large language model\")"
+    },
+    {
+      "strategy": "Architecture/Methodology Search",
+      "query": "all:(\"multi-agent system\" OR \"hybrid architecture\" OR \"RAG pipeline\" OR \"knowledge graph\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"scientific reasoning\" OR \"literature analysis\")"
+    },
+    {
+      "strategy": "Benchmark/Dataset Search",
+      "query": "all:(\"benchmarking\" OR \"evaluation metrics\" OR \"performance evaluation\") AND all:(\"scientific discovery\" OR \"literature analysis\") AND all:(\"LLM agent\" OR \"autonomous researcher\")"
+    },
+    {
+      "strategy": "Review Search",
+      "query": "ti:(\"review\" OR \"survey\") AND abs:(\"large language models\" AND \"scientific literature\" AND \"trend analysis\" AND \"knowledge discovery\")"
+    },
+    {
+      "strategy": "Architecture/Methodology Search",
+      "query": "all:(\"self-correction\" OR \"self-critique\" OR \"iterative refinement\") AND all:(\"LLM\" OR \"large language model\") AND all:(\"reasoning\") AND all:(\"scientific analysis\")"
+    },
+    {
+      "strategy": "Focused Search",
+      "query": "all:(\"knowledge representation\" OR \"knowledge extraction\" OR \"relation extraction\") AND all:(\"scientific text\" OR \"biomedical text\") AND all:(\"LLM\" OR \"large language model\")"
+    }
+  ],
+  "ranking_summary": {
+    "total": 55,
+    "top_5_avg_score": 0.488,
+    "categories_analysis": {
+      "prioritization": 3.0,
+      "validation": 3.0,
+      "architecture": 3.0
+    },
+    "top_paper": {
+      "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+      "score": 0.5,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ]
+    }
+  },
+  "top_papers": [
+    {
+      "rank": 1,
+      "score": 0.5,
+      "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+      "authors": [],
+      "arxiv_id": "2505.19955v2",
+      "categories": [],
+      "overall_score": 0.5,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 1 (оценка: 0.50). Умеренная релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 2,
+      "score": 0.5,
+      "title": "BioDSA-1K: Benchmarking Data Science Agents for Biomedical Research",
+      "authors": [],
+      "arxiv_id": "2505.16100v1",
+      "categories": [],
+      "overall_score": 0.5,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 2 (оценка: 0.50). Умеренная релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 3,
+      "score": 0.5,
+      "title": "Dynamic Knowledge Exchange and Dual-diversity Review: Concisely   Unleashing the Potential of a Multi-Agent Research Team",
+      "authors": [],
+      "arxiv_id": "2506.18348v2",
+      "categories": [],
+      "overall_score": 0.5,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 3 (оценка: 0.50). Умеренная релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 4,
+      "score": 0.47,
+      "title": "From Reproduction to Replication: Evaluating Research Agents with   Progressive Code Masking",
+      "authors": [],
+      "arxiv_id": "2506.19724v1",
+      "categories": [],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 4 (оценка: 0.47). Низкая релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 5,
+      "score": 0.47,
+      "title": "PhysGym: Benchmarking LLMs in Interactive Physics Discovery with   Controlled Priors",
+      "authors": [],
+      "arxiv_id": "2507.15550v1",
+      "categories": [],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 5 (оценка: 0.47). Низкая релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 6,
+      "score": 0.47,
+      "title": "LMR-BENCH: Evaluating LLM Agent's Ability on Reproducing Language   Modeling Research",
+      "authors": [],
+      "arxiv_id": "2506.17335v1",
+      "categories": [],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 6 (оценка: 0.47). Низкая релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 7,
+      "score": 0.47,
+      "title": "DISCOVERYWORLD: A Virtual Environment for Developing and Evaluating   Automated Scientific Discovery Agents",
+      "authors": [],
+      "arxiv_id": "2406.06769v2",
+      "categories": [],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 7 (оценка: 0.47). Низкая релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 8,
+      "score": 0.47,
+      "title": "From Automation to Autonomy: A Survey on Large Language Models in   Scientific Discovery",
+      "authors": [],
+      "arxiv_id": "2505.13259v1",
+      "categories": [],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 8 (оценка: 0.47). Низкая релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 9,
+      "score": 0.47,
+      "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+      "authors": [],
+      "arxiv_id": "2505.19897v2",
+      "categories": [],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 9 (оценка: 0.47). Низкая релевантность к нашей задаче.",
+      "pdf_url": ""
+    },
+    {
+      "rank": 10,
+      "score": 0.47,
+      "title": "From LLM Reasoning to Autonomous AI Agents: A Comprehensive Review",
+      "authors": [],
+      "arxiv_id": "2504.19678v1",
+      "categories": [],
+      "overall_score": 0.4,
+      "key_insights": [
+        "Из сохраненного состояния"
+      ],
+      "relevance": "Ранее проанализированная статья",
+      "justification": "[AI-анализ]: Все представленные статьи уже были проанализированы ранее, поэтому я буду исходить из того, что у вас есть доступ к предыдущим анализам.  Вместо повторения информации, я сосредоточусь на обобщении и в... | Ранг 10 (оценка: 0.47). Низкая релевантность к нашей задаче.",
+      "pdf_url": ""
+    }
+  ],
+  "save_metadata": {
+    "saved_at": "2025-07-22T10:15:17.794213",
+    "save_path": "output/reports/2025-07-22/arxiv_analysis_20250722_101517.json",
+    "save_config": {
+      "full_results_included": false,
+      "date_structure_used": false
+    },
+    "full_results_removed": true
+  }
+}

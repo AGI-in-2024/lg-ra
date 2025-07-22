@@ -1,0 +1,83 @@
+{
+  "2505.19955v2": {
+    "arxiv_id": "2505.19955v2",
+    "title": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+    "analysis_timestamp": "2025-07-21T13:49:11.559463",
+    "overall_score": 0.5,
+    "priority_rank": 1,
+    "priority_score": 0.37968749999999996,
+    "session_id": "20250721_134844"
+  },
+  "2505.19897v2": {
+    "arxiv_id": "2505.19897v2",
+    "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic   Scientific Workflows",
+    "analysis_timestamp": "2025-07-21T13:49:11.559773",
+    "overall_score": 0.4,
+    "priority_rank": 3,
+    "priority_score": 0.30156249999999996,
+    "session_id": "20250721_134844"
+  },
+  "2505.18397v2": {
+    "arxiv_id": "2505.18397v2",
+    "title": "An Outlook on the Opportunities and Challenges of Multi-Agent AI Systems",
+    "analysis_timestamp": "2025-07-21T13:49:11.562830",
+    "overall_score": 0.25,
+    "priority_rank": 7,
+    "priority_score": 0.16906249999999995,
+    "session_id": "20250721_134844"
+  },
+  "2501.05155v1": {
+    "arxiv_id": "2501.05155v1",
+    "title": "Biomedical Relation Extraction via Adaptive Document-Relation   Cross-Mapping and Concept Unique Identifier",
+    "analysis_timestamp": "2025-07-21T13:49:11.562955",
+    "overall_score": 0.3,
+    "priority_rank": 6,
+    "priority_score": 0.19499999999999995,
+    "session_id": "20250721_134844"
+  },
+  "2410.21155v1": {
+    "arxiv_id": "2410.21155v1",
+    "title": "SciER: An Entity and Relation Extraction Dataset for Datasets, Methods,   and Tasks in Scientific Documents",
+    "analysis_timestamp": "2025-07-21T13:49:11.563063",
+    "overall_score": 0.3,
+    "priority_rank": 8,
+    "priority_score": 0.16874999999999998,
+    "session_id": "20250721_134844"
+  },
+  "2406.11486v1": {
+    "arxiv_id": "2406.11486v1",
+    "title": "Analysing zero-shot temporal relation extraction on clinical notes using   temporal consistency",
+    "analysis_timestamp": "2025-07-21T13:49:11.563155",
+    "overall_score": 0.2,
+    "priority_rank": 9,
+    "priority_score": 0.12999999999999998,
+    "session_id": "20250721_134844"
+  },
+  "2507.07257v2": {
+    "arxiv_id": "2507.07257v2",
+    "title": "Open Source Planning & Control System with Language Agents for   Autonomous Scientific Discovery",
+    "analysis_timestamp": "2025-07-21T13:49:11.563256",
+    "overall_score": 0.4,
+    "priority_rank": 4,
+    "priority_score": 0.26874999999999993,
+    "session_id": "20250721_134844"
+  },
+  "2507.02083v2": {
+    "arxiv_id": "2507.02083v2",
+    "title": "Measuring Scientific Capabilities of Language Models with a Systems   Biology Dry Lab",
+    "analysis_timestamp": "2025-07-21T13:49:11.563352",
+    "overall_score": 0.4,
+    "priority_rank": 5,
+    "priority_score": 0.23812499999999998,
+    "session_id": "20250721_134844"
+  },
+  "2506.18348v2": {
+    "arxiv_id": "2506.18348v2",
+    "title": "Dynamic Knowledge Exchange and Dual-diversity Review: Concisely   Unleashing the Potential of a Multi-Agent Research Team",
+    "analysis_timestamp": "2025-07-21T13:49:11.563446",
+    "overall_score": 0.4,
+    "priority_rank": 2,
+    "priority_score": 0.3103125,
+    "session_id": "20250721_134844"
+  }
+}
