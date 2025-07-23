@@ -1,0 +1,7 @@
+.venv
+cache
+docsforllm
+downloaded_pdfs
+pipeline_test/
+utils/
+lcgr.py

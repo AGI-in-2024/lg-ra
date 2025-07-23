@@ -1,0 +1,280 @@
+{
+  "ebselen": [
+    "ebselen"
+  ],
+  "naloxone": [
+    "naloxone"
+  ],
+  "CART": [
+    "CART"
+  ],
+  "stroke": [
+    "stroke"
+  ],
+  "Nitrendipine": [
+    "Nitrendipine"
+  ],
+  "ANGPT2": [
+    "ANGPT2"
+  ],
+  "NPY": [
+    "NPY"
+  ],
+  "Angiotensin II": [
+    "Angiotensin II"
+  ],
+  "GSK3ẞ": [
+    "GSK3ẞ"
+  ],
+  "Atrial natriuretic factor": [
+    "Atrial natriuretic factor"
+  ],
+  "Heart Failure": [
+    "Heart Failure"
+  ],
+  "Paracetamol": [
+    "paracetamol",
+    "Paracetamol"
+  ],
+  "Diabetes": [
+    "Diabetes"
+  ],
+  "tenascin C": [
+    "tenascin C"
+  ],
+  "mortality": [
+    "mortality"
+  ],
+  "MTORC1": [
+    "MTORC1"
+  ],
+  "POMC": [
+    "POMC"
+  ],
+  "GLP-1R": [
+    "Glp1r",
+    "GLP-1R"
+  ],
+  "CRP": [
+    "CRP"
+  ],
+  "Semaglutide": [
+    "Semaglutide",
+    "semaglutide"
+  ],
+  "nephritis": [
+    "nephritis"
+  ],
+  "ghrelin": [
+    "ghrelin"
+  ],
+  "Perindopril": [
+    "perindopril",
+    "Perindopril"
+  ],
+  "diclofenac": [
+    "diclofenac"
+  ],
+  "PPGNTS": [
+    "PPGNTS"
+  ],
+  "Renin": [
+    "Renin"
+  ],
+  "Captopril": [
+    "Captopril"
+  ],
+  "Resveratrol": [
+    "Resveratrol",
+    "RESV"
+  ],
+  "dapagliflozin": [
+    "dapagliflozin"
+  ],
+  "NCAM1": [
+    "NCAM1"
+  ],
+  "aspirin": [
+    "aspirin"
+  ],
+  "GLP-1": [
+    "GLP-1"
+  ],
+  "adiponectin": [
+    "adiponectin"
+  ],
+  "Enalaprilat": [
+    "Enalaprilat"
+  ],
+  "Angiotensin I": [
+    "Angiotensin I"
+  ],
+  "NT-proBNP": [
+    "NT-proBNP"
+  ],
+  "MSR1": [
+    "MSR1"
+  ],
+  "oxytocin": [
+    "oxytocin"
+  ],
+  "Osteoarthritis": [
+    "Osteoarthritis"
+  ],
+  "cfChPs": [
+    "cfChPs"
+  ],
+  "L-Trp": [
+    "L-Trp"
+  ],
+  "INAD": [
+    "INAD"
+  ],
+  "ACE inhibitors": [
+    "ACE inhibitors",
+    "ACEIs",
+    "ACEI"
+  ],
+  "AgRP": [
+    "AgRP"
+  ],
+  "BCl-2": [
+    "BCl-2"
+  ],
+  "HbA1c": [
+    "HbA1c"
+  ],
+  "codeine": [
+    "codeine"
+  ],
+  "Prostaglandins": [
+    "Prostaglandins"
+  ],
+  "Perindoprilat": [
+    "Perindoprilat"
+  ],
+  "Essential hypertension": [
+    "Essential hypertension"
+  ],
+  "CREB": [
+    "CREB"
+  ],
+  "leptin": [
+    "leptin"
+  ],
+  "liraglutide": [
+    "liraglutide"
+  ],
+  "thrombospondin 2": [
+    "thrombospondin 2"
+  ],
+  "Ibuprofen": [
+    "Ibuprofen"
+  ],
+  "Hypertension": [
+    "Hypertension"
+  ],
+  "apoptosis": [
+    "apoptosis"
+  ],
+  "PPG": [
+    "PPG"
+  ],
+  "kynurenine": [
+    "kynurenine"
+  ],
+  "IGFBP": [
+    "IGFBP"
+  ],
+  "insulin resistance": [
+    "insulin resistance"
+  ],
+  "SIRD": [
+    "SIRD"
+  ],
+  "UNC5D": [
+    "UNC5D"
+  ],
+  "dextropropoxyphene": [
+    "dextropropoxyphene"
+  ],
+  "GABA": [
+    "GABA"
+  ],
+  "Oxtr": [
+    "Oxtr"
+  ],
+  "pentazocine": [
+    "pentazocine"
+  ],
+  "DNA": [
+    "DNA"
+  ],
+  "cancer": [
+    "cancer"
+  ],
+  "Microcebus murinus": [
+    "Microcebus murinus"
+  ],
+  "exenatide": [
+    "exenatide"
+  ],
+  "Myocardial Infarction": [
+    "Myocardial Infarction",
+    "myocardial infarction"
+  ],
+  "IDO1": [
+    "IDO1"
+  ],
+  "type 2 diabetes mellitus": [
+    "type 2 diabetes mellitus"
+  ],
+  "Tramadol": [
+    "Tramadol"
+  ],
+  "Bradykinin": [
+    "Bradykinin"
+  ],
+  "morphine": [
+    "morphine"
+  ],
+  "CD68": [
+    "CD68"
+  ],
+  "Enalapril": [
+    "Enalapril"
+  ],
+  "Hydrochlorothiazide": [
+    "Hydrochlorothiazide"
+  ],
+  "IDO2": [
+    "IDO2"
+  ],
+  "SIDD": [
+    "SIDD"
+  ],
+  "DTA": [
+    "DTA"
+  ],
+  "Pla2g6": [
+    "Pla2g6"
+  ],
+  "CD93": [
+    "CD93"
+  ],
+  "ARC": [
+    "ARC"
+  ],
+  "ACE": [
+    "ACE"
+  ],
+  "Atenolol": [
+    "Atenolol"
+  ],
+  "NFK": [
+    "NFK"
+  ],
+  "GHR": [
+    "GHR"
+  ]
+}
