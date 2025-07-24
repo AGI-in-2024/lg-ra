@@ -590,27 +590,27 @@ CRITICAL: Only use the exact subgroup_type names provided. Include direction_ran
         if not critiqued_list:
             return HierarchicalReport(timestamp=datetime.now().isoformat(), total_programs=0, programs=[], unclustered_directions=[])
         
-        # 2. Векторизация и Кластеризация
-        print("   🧠 -> Phase 2.2: Clustering directions thematically...")
-        from sklearn.cluster import DBSCAN
-        import numpy as np
+        # 2. Векторизация и Кластеризация - ОТКЛЮЧЕНО
+        print("   🧠 -> Phase 2.2: Clustering directions thematically... (DISABLED - using single cluster)")
+        # from sklearn.cluster import DBSCAN
+        # import numpy as np
         
-        # Используем Gemini embeddings для получения векторов
-        embeddings = self._get_gemini_embeddings([d.description for d in critiqued_list])
+        # # Используем Gemini embeddings для получения векторов
+        # embeddings = self._get_gemini_embeddings([d.description for d in critiqued_list])
 
-        # Используем DBSCAN для кластеризации (строгие параметры для фокусированных кластеров)
-        dbscan = DBSCAN(eps=0.35, min_samples=2, metric='cosine')
-        clusters = dbscan.fit_predict(embeddings)
+        # # Используем DBSCAN для кластеризации (строгие параметры для фокусированных кластеров)
+        # dbscan = DBSCAN(eps=0.35, min_samples=2, metric='cosine')
+        # clusters = dbscan.fit_predict(embeddings)
 
+        # Все направления помещаем в один кластер (кластер 0)
         clustered_directions = defaultdict(list)
         unclustered_directions = []
-        for i, direction in enumerate(critiqued_list):
-            if clusters[i] == -1: # -1 это шум (не попали в кластер)
-                unclustered_directions.append(direction)
-            else:
-                clustered_directions[clusters[i]].append(direction)
         
-        print(f"      ✅ Найдено {len(clustered_directions)} тематических кластеров.")
+        # Все направления идут в один кластер
+        for direction in critiqued_list:
+            clustered_directions[0].append(direction)
+        
+        print(f"      ✅ Используется единый кластер с {len(clustered_directions[0])} направлениями.")
 
         # 3. Синтез отчета Главным Аналитиком
         print("   🏆 -> Phase 2.3: Synthesizing the final strategic report...")

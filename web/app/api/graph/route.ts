@@ -26,12 +26,15 @@ interface GraphData {
   edges: GraphEdge[];
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const graphmlPath = 'public/data/dataset1/longevity_knowledge_graph.graphml';
+    const { searchParams } = new URL(request.url);
+    const dataset = searchParams.get('dataset') || 'dataset1';
+    
+    const graphmlPath = `public/data/${dataset}/longevity_knowledge_graph.graphml`;
     
     if (!fs.existsSync(graphmlPath)) {
-      return NextResponse.json({ error: 'GraphML file not found' }, { status: 404 });
+      return NextResponse.json({ error: `GraphML file not found for dataset: ${dataset}` }, { status: 404 });
     }
 
     const xmlData = fs.readFileSync(graphmlPath, 'utf8');

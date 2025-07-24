@@ -36,9 +36,10 @@ interface GraphVisualizationProps {
   focusNodeId?: string;
   highlightPapers?: string[];
   openSearch?: boolean;
+  dataset?: string;
 }
 
-export default function GraphVisualization({ focusNodeId, highlightPapers = [], openSearch = false }: GraphVisualizationProps = {}) {
+export default function GraphVisualization({ focusNodeId, highlightPapers = [], openSearch = false, dataset = 'dataset1' }: GraphVisualizationProps = {}) {
   const [graphData, setGraphData] = useState<GraphData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -62,13 +63,15 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
   const simulationRef = useRef<any>(null);
 
   // Load graph data from API
-  const loadGraphData = async () => {
+  const loadGraphData = useCallback(async () => {
+    if (!dataset) return;
+    
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('/api/graph');
+      const response = await fetch(`/api/graph?dataset=${dataset}`);
       if (!response.ok) {
-        throw new Error('Ошибка загрузки данных графа');
+        throw new Error(`Ошибка загрузки данных графа для ${dataset}`);
       }
       const data: GraphData = await response.json();
       setGraphData(data);
@@ -77,7 +80,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
     } finally {
       setLoading(false);
     }
-  };
+  }, [dataset]);
 
   // Node styling functions
   const getNodeColor = useCallback((node: GraphNode) => {
@@ -353,7 +356,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
     if (focusNodeId || highlightPapers.length > 0 || openSearch) {
       setShowSearchPanel(true);
     }
-  }, [focusNodeId, highlightPapers, openSearch]);
+  }, [focusNodeId, highlightPapers, openSearch, loadGraphData]);
 
   // Фильтрация узлов по поисковому запросу и типам
   useEffect(() => {

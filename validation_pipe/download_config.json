@@ -1,0 +1,14 @@
+{
+  "google_drive_folder_url": "https://drive.google.com/drive/folders/1OAECK_1YX0NCqcTLMewNZRgoPKCKYfgt",
+  "input_pdf_count": 20,
+  "predict_pdf_count": 1,
+  "download_timeout": 60,
+  "description": "Конфигурация для скачивания данных из Google Drive",
+  "alternative_folders": [
+    {
+      "name": "Папка по умолчанию",
+      "url": "https://drive.google.com/drive/folders/1OAECK_1YX0NCqcTLMewNZRgoPKCKYfgt",
+      "description": "Основная папка с данными для валидации"
+    }
+  ]
+} 

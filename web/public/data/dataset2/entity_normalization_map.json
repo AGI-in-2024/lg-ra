@@ -1,0 +1,302 @@
+{
+  "CART": [
+    "CART",
+    "Cart"
+  ],
+  "Hypertension": [
+    "Hypertension"
+  ],
+  "mitochondrial dysfunction": [
+    "mitochondrial dysfunction"
+  ],
+  "GLP-1R": [
+    "GLP-1R",
+    "Glp1r"
+  ],
+  "BDNF": [
+    "BDNF"
+  ],
+  "ACEIs": [
+    "ACEIs",
+    "ACEI"
+  ],
+  "mortality": [
+    "mortality"
+  ],
+  "CVD": [
+    "CVD",
+    "CVD2"
+  ],
+  "INAD": [
+    "INAD"
+  ],
+  "PrRP": [
+    "PrRP"
+  ],
+  "POMC": [
+    "POMC",
+    "Pomc"
+  ],
+  "NPY": [
+    "Npy",
+    "NPY"
+  ],
+  "apoptosis": [
+    "apoptosis"
+  ],
+  "Insulin": [
+    "Insulin",
+    "insulin"
+  ],
+  "Norepinephrine": [
+    "noradrenaline",
+    "Norepinephrine"
+  ],
+  "Hypoglycemia": [
+    "Hypoglycemia"
+  ],
+  "Perindopril": [
+    "Perindopril",
+    "perindopril"
+  ],
+  "oxytocin": [
+    "oxytocin"
+  ],
+  "Pla2g6": [
+    "Pla2g6"
+  ],
+  "cholesterol": [
+    "cholesterol"
+  ],
+  "IDO1": [
+    "IDO1"
+  ],
+  "SST": [
+    "SST"
+  ],
+  "fatty acid metabolism": [
+    "fatty acid metabolism"
+  ],
+  "SOD": [
+    "SOD"
+  ],
+  "GLP-1RAs": [
+    "GLP-1RA",
+    "GLP-1RAs"
+  ],
+  "SIRD": [
+    "SIRD"
+  ],
+  "PPG": [
+    "PPG",
+    "Ppg"
+  ],
+  "myocardial infarction": [
+    "MI",
+    "myocardial infarction"
+  ],
+  "R": [
+    "R"
+  ],
+  "osteoarthritis": [
+    "osteoarthritis"
+  ],
+  "cfChPs": [
+    "cfChPs"
+  ],
+  "Resveratrol": [
+    "Resveratrol",
+    "RESV"
+  ],
+  "Ramipril": [
+    "Ramipril"
+  ],
+  "SIDD": [
+    "SIDD"
+  ],
+  "fluconazole": [
+    "fluconazole"
+  ],
+  "Angiotensin I": [
+    "Angiotensin I"
+  ],
+  "GLP-1": [
+    "GLP-1"
+  ],
+  "ATF-3": [
+    "ATF-3"
+  ],
+  "AgRP": [
+    "AgRP",
+    "Agrp"
+  ],
+  "telomere": [
+    "telomere"
+  ],
+  "Microcebus murinus": [
+    "Microcebus murinus"
+  ],
+  "ghrelin": [
+    "ghrelin"
+  ],
+  "PPGNTS": [
+    "PPGNTS"
+  ],
+  "serotonin": [
+    "serotonin"
+  ],
+  "aneuploidy": [
+    "aneuploidy"
+  ],
+  "Renin": [
+    "Renin"
+  ],
+  "ACE": [
+    "ACE"
+  ],
+  "ARH": [
+    "ARH"
+  ],
+  "amyloid": [
+    "amyloid"
+  ],
+  "cytochrome b5": [
+    "cytochrome b5"
+  ],
+  "leptin receptor": [
+    "leptin receptor"
+  ],
+  "Liraglutide": [
+    "Liraglutide",
+    "liraglutide"
+  ],
+  "c-Fos": [
+    "c-Fos"
+  ],
+  "type 2 diabetes mellitus": [
+    "type 2 diabetes mellitus"
+  ],
+  "TNC": [
+    "TNC"
+  ],
+  "BW": [
+    "BW"
+  ],
+  "R-Cu": [
+    "R-Cu"
+  ],
+  "Aldosterone": [
+    "Aldosterone"
+  ],
+  "Atrial natriuretic factor": [
+    "Atrial natriuretic factor"
+  ],
+  "stroke": [
+    "stroke"
+  ],
+  "EE": [
+    "EE"
+  ],
+  "dapagliflozin": [
+    "dapagliflozin"
+  ],
+  "C57BL/6": [
+    "C57BL/6"
+  ],
+  "ebselen": [
+    "ebselen"
+  ],
+  "Type 1 Diabetes": [
+    "Type 1 Diabetes"
+  ],
+  "naloxone": [
+    "naloxone"
+  ],
+  "Semaglutide": [
+    "Semaglutide VT750",
+    "Semaglutide",
+    "semaglutide"
+  ],
+  "TDO": [
+    "TDO"
+  ],
+  "econazole": [
+    "econazole"
+  ],
+  "H2AX": [
+    "H2AX"
+  ],
+  "4-phenylimidazole": [
+    "4-phenylimidazole"
+  ],
+  "morphine": [
+    "morphine"
+  ],
+  "Cu": [
+    "Cu"
+  ],
+  "Tramadol": [
+    "Tramadol"
+  ],
+  "HbA1c": [
+    "HbA1c"
+  ],
+  "mTORC1": [
+    "mTORC1"
+  ],
+  "diclofenac": [
+    "diclofenac"
+  ],
+  "glucose": [
+    "glucose"
+  ],
+  "NSAIDs": [
+    "NSAIDs"
+  ],
+  "miconazole": [
+    "miconazole"
+  ],
+  "menadione": [
+    "menadione"
+  ],
+  "NF-kB": [
+    "NF-kB"
+  ],
+  "ARC": [
+    "ARC"
+  ],
+  "cytochrome P450": [
+    "cytochrome P450"
+  ],
+  "Angiotensin II": [
+    "Angiotensin II"
+  ],
+  "TH": [
+    "TH"
+  ],
+  "collagen": [
+    "collagen"
+  ],
+  "elastin": [
+    "elastin"
+  ],
+  "senescence": [
+    "senescence"
+  ],
+  "inflammation": [
+    "inflammation"
+  ],
+  "C-reactive protein": [
+    "C-reactive protein"
+  ],
+  "cardiac myosin": [
+    "myocardial myosin",
+    "cardiac myosin"
+  ],
+  "Adrenaline": [
+    "Adrenaline"
+  ],
+  "DNA": [
+    "DNA"
+  ]
+}

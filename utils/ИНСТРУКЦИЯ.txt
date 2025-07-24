@@ -1,0 +1,44 @@
+УТИЛИТА ЗАГРУЗКИ ФАЙЛОВ НА GOOGLE DRIVE
+========================================
+
+ФАЙЛЫ:
+------
+- utils/google_drive_uploader.py - основная утилита
+- main_pipeline/upload_to_drive.py - скрипт для запуска из main_pipeline
+- utils/setup_env.sh - пример установки переменной окружения
+
+НАСТРОЙКА:
+----------
+1. Установите переменную окружения:
+   export GOOGLE_APPLICATION_CREDENTIALS="/home/dukhanin/ai-hr/app/back/creds/googlecreadofmine.json"
+
+2. Включите Google Drive API в Google Cloud Console:
+   https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=222751902086
+
+3. Убедитесь что Service Account имеет права на Drive API
+
+ИСПОЛЬЗОВАНИЕ:
+--------------
+Из папки main_pipeline:
+  python upload_to_drive.py
+
+Или напрямую:
+  python ../utils/google_drive_uploader.py
+
+По умолчанию загружает файлы из: downloaded_pdfs/references_dlya_statiy_2025
+
+ВОЗМОЖНОСТИ:
+------------
+- Загрузка всех файлов из выбранной папки
+- Создание папки на Google Drive с тем же названием
+- Простой интерфейс с подтверждением
+- Отображение прогресса загрузки
+- Обработка ошибок
+
+ТРЕБОВАНИЯ:
+-----------
+Все необходимые библиотеки уже есть в requirements.txt:
+- google-api-python-client
+- google-auth
+- google-auth-oauthlib
+- google-auth-httplib2 

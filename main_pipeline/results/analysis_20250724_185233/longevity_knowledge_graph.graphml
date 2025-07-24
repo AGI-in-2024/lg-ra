@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d9" for="edge" attr.name="context" attr.type="string"/>
+<key id="d8" for="edge" attr.name="type" attr.type="string"/>
+<key id="d7" for="node" attr.name="canonical_name" attr.type="string"/>
+<key id="d6" for="node" attr.name="name" attr.type="string"/>
+<key id="d5" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d4" for="node" attr.name="paper_id" attr.type="string"/>
+<key id="d3" for="node" attr.name="statement" attr.type="string"/>
+<key id="d2" for="node" attr.name="year" attr.type="long"/>
+<key id="d1" for="node" attr.name="content" attr.type="string"/>
+<key id="d0" for="node" attr.name="type" attr.type="string"/>
+<graph edgedefault="directed"><node id="TEST:4">
+  <data key="d0">Paper</data>
+  <data key="d1">We investigated the protein landscape of senescent cells using a novel single-cell proteomics method. Our analysis revealed that mTOR signaling is consistently upregulated. We hypothesize this is a core driver of the senescent phenotype.</data>
+  <data key="d2">2024</data>
+</node>
+<node id="TEST:4_Result_5547062130418941356">
+  <data key="d0">Result</data>
+  <data key="d1">Our analysis revealed that mTOR signaling is consistently upregulated.</data>
+  <data key="d3">Our analysis revealed that mTOR signaling is consistently upregulated.</data>
+  <data key="d4">TEST:4</data>
+</node>
+<node id="Protein_MTOR">
+  <data key="d0">Entity</data>
+  <data key="d5">Protein</data>
+  <data key="d6">MTOR</data>
+  <data key="d7">mTOR</data>
+</node>
+<node id="TEST:4_Hypothesis_-8673429279645156987">
+  <data key="d0">Hypothesis</data>
+  <data key="d1">We hypothesize this is a core driver of the senescent phenotype.</data>
+  <data key="d3">We hypothesize this is a core driver of the senescent phenotype.</data>
+  <data key="d4">TEST:4</data>
+</node>
+<node id="Process_SENESCENCE">
+  <data key="d0">Entity</data>
+  <data key="d5">Process</data>
+  <data key="d6">SENESCENCE</data>
+  <data key="d7">senescence</data>
+</node>
+<node id="TEST:4_Method_7888844298708002864">
+  <data key="d0">Method</data>
+  <data key="d1">We investigated the protein landscape of senescent cells using a novel single-cell proteomics method.</data>
+  <data key="d3">We investigated the protein landscape of senescent cells using a novel single-cell proteomics method.</data>
+  <data key="d4">TEST:4</data>
+</node>
+<node id="Protein_PROTEIN">
+  <data key="d0">Entity</data>
+  <data key="d5">Protein</data>
+  <data key="d6">PROTEIN</data>
+  <data key="d7">protein</data>
+</node>
+<node id="TEST:2">
+  <data key="d0">Paper</data>
+  <data key="d1">The role of mTOR in aging is well-established. We hypothesized that inhibiting mTOR with Rapamycin would reduce cellular senescence. Our results, obtained via flow cytometry, showed a significant decrease in senescent cells. This confirms the link between mTOR and senescence.</data>
+  <data key="d2">2022</data>
+</node>
+<node id="TEST:2_Hypothesis_-270666275856639435">
+  <data key="d0">Hypothesis</data>
+  <data key="d1">inhibiting mTOR with Rapamycin would reduce cellular senescence</data>
+  <data key="d3">inhibiting mTOR with Rapamycin would reduce cellular senescence</data>
+  <data key="d4">TEST:2</data>
+</node>
+<node id="Compound_RAPAMYCIN">
+  <data key="d0">Entity</data>
+  <data key="d5">Compound</data>
+  <data key="d6">RAPAMYCIN</data>
+  <data key="d7">Rapamycin</data>
+</node>
+<node id="TEST:2_Method_-7654057470960536095">
+  <data key="d0">Method</data>
+  <data key="d1">via flow cytometry</data>
+  <data key="d3">via flow cytometry</data>
+  <data key="d4">TEST:2</data>
+</node>
+<node id="TEST:2_Result_-8126203552215897675">
+  <data key="d0">Result</data>
+  <data key="d1">showed a significant decrease in senescent cells</data>
+  <data key="d3">showed a significant decrease in senescent cells</data>
+  <data key="d4">TEST:2</data>
+</node>
+<node id="TEST:2_Conclusion_-6681513359543114557">
+  <data key="d0">Conclusion</data>
+  <data key="d1">This confirms the link between mTOR and senescence</data>
+  <data key="d3">This confirms the link between mTOR and senescence</data>
+  <data key="d4">TEST:2</data>
+</node>
+<node id="TEST:1">
+  <data key="d0">Paper</data>
+  <data key="d1">Here we test the hypothesis that SIRT1 activation extends lifespan. Using CRISPR-Cas9 as our primary method, we observed a 20% increase in lifespan in C. elegans. We conclude that SIRT1 is a key longevity gene.</data>
+  <data key="d2">2023</data>
+</node>
+<node id="TEST:1_Hypothesis_-913269626120009590">
+  <data key="d0">Hypothesis</data>
+  <data key="d1">that SIRT1 activation extends lifespan</data>
+  <data key="d3">that SIRT1 activation extends lifespan</data>
+  <data key="d4">TEST:1</data>
+</node>
+<node id="Gene_SIRT1">
+  <data key="d0">Entity</data>
+  <data key="d5">Gene</data>
+  <data key="d6">SIRT1</data>
+  <data key="d7">SIRT1</data>
+</node>
+<node id="TEST:1_Method_3983986953974419350">
+  <data key="d0">Method</data>
+  <data key="d1">Using CRISPR-Cas9 as our primary method</data>
+  <data key="d3">Using CRISPR-Cas9 as our primary method</data>
+  <data key="d4">TEST:1</data>
+</node>
+<node id="TEST:1_Result_-7571784317300098516">
+  <data key="d0">Result</data>
+  <data key="d1">we observed a 20% increase in lifespan in C. elegans</data>
+  <data key="d3">we observed a 20% increase in lifespan in C. elegans</data>
+  <data key="d4">TEST:1</data>
+</node>
+<node id="TEST:1_Conclusion_3285492857228543398">
+  <data key="d0">Conclusion</data>
+  <data key="d1">that SIRT1 is a key longevity gene</data>
+  <data key="d3">that SIRT1 is a key longevity gene</data>
+  <data key="d4">TEST:1</data>
+</node>
+<node id="TEST:3">
+  <data key="d0">Paper</data>
+  <data key="d1">This paper explores if SIRT1 is involved in cellular metabolism. We propose that it is a master regulator. However, our experiments using mass spectrometry did not yield conclusive results connecting it directly to glucose uptake.</data>
+  <data key="d2">2021</data>
+</node>
+<node id="TEST:3_Hypothesis_1876411301601024550">
+  <data key="d0">Hypothesis</data>
+  <data key="d1">We propose that it is a master regulator.</data>
+  <data key="d3">We propose that it is a master regulator.</data>
+  <data key="d4">TEST:3</data>
+</node>
+<node id="TEST:3_Method_-4202083357985892805">
+  <data key="d0">Method</data>
+  <data key="d1">our experiments using mass spectrometry</data>
+  <data key="d3">our experiments using mass spectrometry</data>
+  <data key="d4">TEST:3</data>
+</node>
+<node id="TEST:3_Result_-5999259268534598948">
+  <data key="d0">Result</data>
+  <data key="d1">did not yield conclusive results connecting it directly to glucose uptake.</data>
+  <data key="d3">did not yield conclusive results connecting it directly to glucose uptake.</data>
+  <data key="d4">TEST:3</data>
+</node>
+<edge source="TEST:4" target="TEST:4_Result_5547062130418941356">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:4" target="TEST:4_Hypothesis_-8673429279645156987">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:4" target="TEST:4_Method_7888844298708002864">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:4_Result_5547062130418941356" target="Protein_MTOR">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">Our analysis revealed that mTOR signaling is consistently upregulated.</data>
+</edge>
+<edge source="TEST:4_Hypothesis_-8673429279645156987" target="Process_SENESCENCE">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">We hypothesize this is a core driver of the senescent phenotype.</data>
+</edge>
+<edge source="TEST:4_Method_7888844298708002864" target="Process_SENESCENCE">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">We investigated the protein landscape of senescent cells using a novel single-cell proteomics method.</data>
+</edge>
+<edge source="TEST:4_Method_7888844298708002864" target="Protein_PROTEIN">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">We investigated the protein landscape of senescent cells using a novel single-cell proteomics method.</data>
+</edge>
+<edge source="TEST:2" target="TEST:2_Hypothesis_-270666275856639435">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:2" target="TEST:2_Method_-7654057470960536095">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:2" target="TEST:2_Result_-8126203552215897675">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:2" target="TEST:2_Conclusion_-6681513359543114557">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:2_Hypothesis_-270666275856639435" target="Protein_MTOR">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">inhibiting mTOR with Rapamycin would reduce cellular senescence</data>
+</edge>
+<edge source="TEST:2_Hypothesis_-270666275856639435" target="Compound_RAPAMYCIN">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">inhibiting mTOR with Rapamycin would reduce cellular senescence</data>
+</edge>
+<edge source="TEST:2_Hypothesis_-270666275856639435" target="Process_SENESCENCE">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">inhibiting mTOR with Rapamycin would reduce cellular senescence</data>
+</edge>
+<edge source="TEST:2_Result_-8126203552215897675" target="Process_SENESCENCE">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">showed a significant decrease in senescent cells</data>
+</edge>
+<edge source="TEST:2_Conclusion_-6681513359543114557" target="Protein_MTOR">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">This confirms the link between mTOR and senescence</data>
+</edge>
+<edge source="TEST:2_Conclusion_-6681513359543114557" target="Process_SENESCENCE">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">This confirms the link between mTOR and senescence</data>
+</edge>
+<edge source="TEST:1" target="TEST:1_Hypothesis_-913269626120009590">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:1" target="TEST:1_Method_3983986953974419350">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:1" target="TEST:1_Result_-7571784317300098516">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:1" target="TEST:1_Conclusion_3285492857228543398">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:1_Hypothesis_-913269626120009590" target="Gene_SIRT1">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">that SIRT1 activation extends lifespan</data>
+</edge>
+<edge source="TEST:1_Conclusion_3285492857228543398" target="Gene_SIRT1">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">that SIRT1 is a key longevity gene</data>
+</edge>
+<edge source="TEST:3" target="TEST:3_Hypothesis_1876411301601024550">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:3" target="TEST:3_Method_-4202083357985892805">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:3" target="TEST:3_Result_-5999259268534598948">
+  <data key="d8">CONTAINS</data>
+</edge>
+<edge source="TEST:3_Hypothesis_1876411301601024550" target="Gene_SIRT1">
+  <data key="d8">MENTIONS</data>
+  <data key="d9">We propose that it is a master regulator.</data>
+</edge>
+</graph></graphml>

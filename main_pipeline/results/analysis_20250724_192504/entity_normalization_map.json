@@ -1,0 +1,294 @@
+{
+  "naloxone": [
+    "naloxone"
+  ],
+  "amiloride": [
+    "amiloride"
+  ],
+  "MTORC1": [
+    "MTORC1"
+  ],
+  "dextropropoxyphene": [
+    "dextropropoxyphene"
+  ],
+  "quinidine": [
+    "quinidine"
+  ],
+  "skeletal muscle": [
+    "skeletal muscle"
+  ],
+  "POMC": [
+    "POMC",
+    "Pomc"
+  ],
+  "pentazocine": [
+    "pentazocine"
+  ],
+  "enalapril": [
+    "enalapril"
+  ],
+  "collagen": [
+    "collagen"
+  ],
+  "BClxL": [
+    "BClxL"
+  ],
+  "exenatide": [
+    "exenatide"
+  ],
+  "PLA2G6": [
+    "PLA2G6"
+  ],
+  "oxytocin": [
+    "oxytocin"
+  ],
+  "Perindopril": [
+    "Perindoprilat",
+    "Perindopril",
+    "perindopril"
+  ],
+  "TNC": [
+    "TNC"
+  ],
+  "BDNF": [
+    "BDNF"
+  ],
+  "dapagliflozin": [
+    "dapagliflozin"
+  ],
+  "C57BL/6": [
+    "C57BL/6"
+  ],
+  "telomeres": [
+    "telomeres"
+  ],
+  "BCl2": [
+    "BCl2"
+  ],
+  "postherpetic neuralgia": [
+    "postherpetic neuralgia"
+  ],
+  "imipramine": [
+    "imipramine"
+  ],
+  "type 2 diabetes mellitus": [
+    "type 2 diabetes mellitus",
+    "SIDD",
+    "SIRD"
+  ],
+  "PPG": [
+    "PPG",
+    "PPGNTS"
+  ],
+  "Cu": [
+    "Cu"
+  ],
+  "insulin resistance": [
+    "insulin resistance"
+  ],
+  "insulin": [
+    "insulin"
+  ],
+  "SOD": [
+    "SOD"
+  ],
+  "Bax": [
+    "Bax"
+  ],
+  "TH": [
+    "TH"
+  ],
+  "Semaglutide": [
+    "SemaglutideVT750",
+    "Semaglutide",
+    "semaglutide"
+  ],
+  "ACE": [
+    "ACE"
+  ],
+  "prostaglandins": [
+    "prostaglandins"
+  ],
+  "CART": [
+    "CART",
+    "Cart"
+  ],
+  "captopril": [
+    "captopril"
+  ],
+  "obesity": [
+    "obesity"
+  ],
+  "Hypertension": [
+    "hypertension",
+    "Essential hypertension",
+    "Hypertension"
+  ],
+  "Resveratrol": [
+    "RESV",
+    "Resveratrol"
+  ],
+  "senescence": [
+    "senescence"
+  ],
+  "nitrendipine": [
+    "nitrendipine"
+  ],
+  "53BP1": [
+    "53BP1"
+  ],
+  "hydrochlorothiazide": [
+    "hydrochlorothiazide"
+  ],
+  "apoptosis": [
+    "apoptosis"
+  ],
+  "bradykinin": [
+    "bradykinin"
+  ],
+  "c-Fos": [
+    "c-Fos"
+  ],
+  "NF-kB": [
+    "NF-kB"
+  ],
+  "morphine": [
+    "morphine"
+  ],
+  "stroke": [
+    "stroke"
+  ],
+  "Oxtr": [
+    "Oxtr"
+  ],
+  "Codeine": [
+    "Codeine",
+    "codeine"
+  ],
+  "diclofenac": [
+    "diclofenac"
+  ],
+  "Osteoarthritis": [
+    "Osteoarthritis"
+  ],
+  "Somatostatin": [
+    "SST",
+    "Somatostatin"
+  ],
+  "carbamazepine": [
+    "carbamazepine"
+  ],
+  "arthritis": [
+    "arthritis"
+  ],
+  "atenolol": [
+    "atenolol"
+  ],
+  "heart failure": [
+    "congestive heart failure",
+    "heart failure"
+  ],
+  "CD68": [
+    "CD68"
+  ],
+  "THBS2": [
+    "THBS2"
+  ],
+  "angiotensin II": [
+    "angiotensin II"
+  ],
+  "NPY": [
+    "NPY",
+    "Npy"
+  ],
+  "R-Cu": [
+    "R-Cu"
+  ],
+  "GLP-1R": [
+    "Glp1r",
+    "GLP-1R"
+  ],
+  "Liraglutide": [
+    "liraglutide",
+    "Liraglutide"
+  ],
+  "myocardial infarction": [
+    "myocardial infarction"
+  ],
+  "cimetidine": [
+    "cimetidine"
+  ],
+  "serotonin": [
+    "serotonin"
+  ],
+  "Tramadol": [
+    "Tramadol"
+  ],
+  "AgRP": [
+    "AgRP",
+    "Agrp"
+  ],
+  "H2AX": [
+    "H2AX"
+  ],
+  "HbA1c": [
+    "HbA1c"
+  ],
+  "GSK3B": [
+    "GSK3B"
+  ],
+  "ibuprofen": [
+    "ibuprofen"
+  ],
+  "elastin": [
+    "elastin"
+  ],
+  "DNA": [
+    "DNA"
+  ],
+  "RIP3": [
+    "RIP3"
+  ],
+  "amyloid": [
+    "amyloid"
+  ],
+  "INAD": [
+    "INAD"
+  ],
+  "GABA": [
+    "GABA"
+  ],
+  "ANGPT2": [
+    "ANGPT2"
+  ],
+  "cfChPs": [
+    "cfChPs"
+  ],
+  "PML": [
+    "PML"
+  ],
+  "R": [
+    "R"
+  ],
+  "paracetamol": [
+    "paracetamol"
+  ],
+  "GLP-1": [
+    "GLP-1"
+  ],
+  "IDO1": [
+    "IDO1"
+  ],
+  "CREB": [
+    "CREB"
+  ],
+  "noradrenaline": [
+    "noradrenaline"
+  ],
+  "ATF-3": [
+    "ATF-3"
+  ],
+  "GABA-A": [
+    "GABA-A"
+  ]
+}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import DatasetSelector from '../components/DatasetSelector';
 
 interface Critique {
   is_interesting: boolean;
@@ -43,26 +44,55 @@ interface ReportData {
 
 export default function ReportPage() {
   const [reportData, setReportData] = useState<ReportData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [selectedDataset, setSelectedDataset] = useState('');
 
+  // Загружаем данные из localStorage при первом рендере
   useEffect(() => {
-    loadReportData();
+    const savedDataset = localStorage.getItem('report-dataset');
+    if (savedDataset) {
+      setSelectedDataset(savedDataset);
+    }
   }, []);
 
-  const loadReportData = async () => {
+  // Сохраняем выбранный датасет в localStorage
+  useEffect(() => {
+    if (selectedDataset) {
+      localStorage.setItem('report-dataset', selectedDataset);
+    }
+  }, [selectedDataset]);
+
+  // Загружаем отчет при изменении датасета
+  useEffect(() => {
+    if (selectedDataset) {
+      loadReportData(selectedDataset);
+    }
+  }, [selectedDataset]);
+
+  const loadReportData = async (dataset: string) => {
+    if (!dataset) return;
+    
+    setLoading(true);
+    setError(null);
+    
     try {
-      const response = await fetch('/data/dataset1/hierarchical_research_report.json');
+      const response = await fetch(`/data/${dataset}/hierarchical_research_report.json`);
       if (!response.ok) {
-        throw new Error('Ошибка загрузки отчета');
+        throw new Error(`Ошибка загрузки отчета для ${dataset}`);
       }
       const data = await response.json();
       setReportData(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Неизвестная ошибка');
+      setReportData(null);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleDatasetChange = (dataset: string) => {
+    setSelectedDataset(dataset);
   };
 
   const getScoreColor = (score: number) => {
@@ -77,65 +107,42 @@ export default function ReportPage() {
     return 'bg-gray-600';
   };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-black text-green-400 font-mono flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-xl mb-4">Загрузка отчета...</div>
-          <div className="flex justify-center space-x-1">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce"></div>
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen bg-black text-green-400 font-mono flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-red-400 text-xl mb-4">Ошибка: {error}</div>
-          <button 
-            onClick={loadReportData}
-            className="px-6 py-3 bg-green-600 hover:bg-green-500 text-black font-bold rounded border-2 border-green-400"
-          >
-            Повторить
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  if (!reportData) {
-    return null;
-  }
-
   // Собираем все статьи из отчета
-  const allPapers = reportData.programs.flatMap(program => 
+  const allPapers = reportData ? reportData.programs.flatMap(program => 
     program.subgroups.flatMap(subgroup => 
       subgroup.directions.flatMap(direction => direction.supporting_papers)
     )
-  );
+  ) : [];
 
   const uniquePapers = [...new Set(allPapers)];
 
   return (
-    <div className="min-h-screen bg-black text-green-400 font-mono">
+    <div className="min-h-screen bg-black text-green-400 font-mono relative">
       {/* Header */}
       <div className="border-b border-green-500 p-6">
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold mb-2">ИССЛЕДОВАТЕЛЬСКИЙ ОТЧЕТ</h1>
             <div className="text-green-300 text-sm">
-              Создан: {new Date(reportData.timestamp).toLocaleString('ru-RU')}
-            </div>
-            <div className="text-green-300 text-sm">
-              Программ: {reportData.total_programs}
+              <div>Датасет: <DatasetSelector
+                onDatasetChange={handleDatasetChange}
+                selectedDataset={selectedDataset}
+              /></div>
+              {reportData && (
+                <>
+                  <div>Создан: {new Date(reportData.timestamp).toLocaleString('ru-RU')}</div>
+                  <div>Программ: {reportData.total_programs}</div>
+                </>
+              )}
             </div>
           </div>
           <div className="flex items-center space-x-4">
+            <Link 
+              href="/chat"
+              className="px-4 py-2 bg-red-600 hover:bg-red-500 text-black font-bold rounded border-2 border-red-400 transition-all duration-200"
+            >
+              ЧАТ
+            </Link>
             <a 
               href="/graph"
               className="px-4 py-2 bg-green-600 hover:bg-green-500 text-black font-bold rounded border-2 border-green-400 transition-all duration-200"
@@ -147,7 +154,7 @@ export default function ReportPage() {
                 href={`/graph?highlight=${uniquePapers.join(',')}&search=open`}
                 className="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-black font-bold rounded border-2 border-purple-400 transition-all duration-200"
               >
-                📊 ВСЕ СТАТЬИ В ГРАФЕ
+                ВСЕ СТАТЬИ В ГРАФЕ
               </Link>
             )}
             <Link 
@@ -161,149 +168,192 @@ export default function ReportPage() {
       </div>
 
       {/* Content */}
-      <div className="p-6 space-y-8">
-        {reportData.programs.map((program, programIndex) => (
-          <div key={programIndex} className="border border-green-500 rounded-lg p-6">
-            {/* Program Title */}
-            <h2 className="text-2xl font-bold text-green-400 mb-4">
-              {program.program_title}
-            </h2>
-            
-            {/* Program Summary */}
-            <div className="mb-6 p-4 bg-gray-900 rounded border border-green-600">
-              <h3 className="text-lg font-bold mb-2 text-green-300">Описание программы:</h3>
-              <p className="text-green-200 leading-relaxed">{program.program_summary}</p>
-            </div>
-
-            {/* Subgroups */}
-            <div className="space-y-6">
-              {program.subgroups.map((subgroup, subgroupIndex) => (
-                <div key={subgroupIndex} className="border border-green-600 rounded p-4">
-                  <h3 className="text-xl font-bold text-green-300 mb-3">
-                    {subgroup.subgroup_type}
-                  </h3>
-                  <p className="text-green-200 mb-4">{subgroup.subgroup_description}</p>
-
-                  {/* Directions */}
-                  <div className="space-y-4">
-                    {subgroup.directions.map((direction, directionIndex) => (
-                      <div key={directionIndex} className="border border-green-700 rounded p-4 bg-gray-900">
-                        {/* Direction Header */}
-                        <div className="flex items-start justify-between mb-3">
-                          <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-2">
-                              <span className="text-2xl font-bold text-green-400">#{direction.rank}</span>
-                              <span className={`px-3 py-1 rounded text-xs font-bold text-white ${getTypeColor(direction.research_type)}`}>
-                                {direction.research_type}
-                              </span>
-                            </div>
-                            <h4 className="text-lg font-bold text-green-300">{direction.title}</h4>
-                          </div>
-                          <div className="text-right">
-                            <div className={`text-2xl font-bold ${getScoreColor(direction.critique.final_score)}`}>
-                              {direction.critique.final_score.toFixed(1)}
-                            </div>
-                            <div className="text-sm text-green-400">Итого</div>
-                          </div>
-                        </div>
-
-                        {/* Description */}
-                        <div className="mb-4">
-                          <p className="text-green-200 leading-relaxed">{direction.description}</p>
-                        </div>
-
-                        {/* Scores */}
-                        <div className="grid grid-cols-3 gap-4 mb-4 p-3 bg-black rounded border border-green-800">
-                          <div className="text-center">
-                            <div className={`text-lg font-bold ${getScoreColor(direction.critique.novelty_score)}`}>
-                              {direction.critique.novelty_score.toFixed(1)}
-                            </div>
-                            <div className="text-xs text-green-400">Новизна</div>
-                          </div>
-                          <div className="text-center">
-                            <div className={`text-lg font-bold ${getScoreColor(direction.critique.impact_score)}`}>
-                              {direction.critique.impact_score.toFixed(1)}
-                            </div>
-                            <div className="text-xs text-green-400">Влияние</div>
-                          </div>
-                          <div className="text-center">
-                            <div className={`text-lg font-bold ${getScoreColor(direction.critique.feasibility_score)}`}>
-                              {direction.critique.feasibility_score.toFixed(1)}
-                            </div>
-                            <div className="text-xs text-green-400">Выполнимость</div>
-                          </div>
-                        </div>
-
-                        {/* Strengths and Weaknesses */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                          <div>
-                            <h5 className="font-bold text-green-300 mb-2">Сильные стороны:</h5>
-                            <ul className="space-y-1">
-                              {direction.critique.strengths.map((strength, idx) => (
-                                <li key={idx} className="text-green-200 text-sm">• {strength}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <h5 className="font-bold text-red-300 mb-2">Слабые стороны:</h5>
-                            <ul className="space-y-1">
-                              {direction.critique.weaknesses.map((weakness, idx) => (
-                                <li key={idx} className="text-red-200 text-sm">• {weakness}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-
-                        {/* Recommendation and Papers */}
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="flex items-center gap-4">
-                            <span className="font-bold text-green-300">Рекомендация:</span>
-                            <span className={`px-3 py-1 rounded text-sm font-bold ${
-                              direction.critique.recommendation === 'Strongly Recommend' 
-                                ? 'bg-green-600 text-white' 
-                                : 'bg-yellow-600 text-white'
-                            }`}>
-                              {direction.critique.recommendation}
-                            </span>
-                          </div>
-                          <div className="text-sm text-green-400">
-                            Статей: {direction.supporting_papers.length}
-                          </div>
-                        </div>
-
-                        {/* Links to Graph */}
-                        {direction.supporting_papers.length > 0 && (
-                          <div className="flex flex-wrap gap-2">
-                            <a 
-                              href={`/graph?highlight=${direction.supporting_papers.join(',')}&search=open`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-3 py-1 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold rounded border border-purple-400 transition-all duration-200"
-                            >
-                              📊 Показать статьи в графе
-                            </a>
-                            {direction.supporting_papers.map((paperId, idx) => (
-                              <a 
-                                key={idx}
-                                href={`/graph?focus=${paperId}&highlight=${direction.supporting_papers.join(',')}&search=open`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded border border-blue-400 transition-all duration-200"
-                                title={`Фокус на статье ${paperId}`}
-                              >
-                                🔍 {paperId}
-                              </a>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+      <div className="p-6">
+        {loading && (
+          <div className="text-center py-20">
+            <div className="text-xl mb-4">Загрузка отчета...</div>
+            <div className="flex justify-center space-x-1">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce"></div>
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
             </div>
           </div>
-        ))}
+        )}
+
+        {error && (
+          <div className="text-center py-20">
+            <div className="text-red-400 text-xl mb-4">Ошибка: {error}</div>
+            <button 
+              onClick={() => loadReportData(selectedDataset)}
+              className="px-6 py-3 bg-green-600 hover:bg-green-500 text-black font-bold rounded border-2 border-green-400"
+            >
+              Повторить
+            </button>
+          </div>
+        )}
+
+        {!loading && !error && !reportData && selectedDataset && (
+          <div className="text-center py-20">
+            <div className="text-yellow-400 text-xl">
+              Отчет для датасета {selectedDataset.toUpperCase()} не найден
+            </div>
+          </div>
+        )}
+
+        {!loading && !error && !selectedDataset && (
+          <div className="text-center py-20">
+            <div className="text-green-400 text-xl">
+              Выберите датасет для просмотра отчета
+            </div>
+          </div>
+        )}
+
+        {reportData && !loading && !error && (
+          <div className="space-y-8">
+            {reportData.programs.map((program, programIndex) => (
+              <div key={programIndex} className="border border-green-500 rounded-lg p-6">
+                {/* Program Title */}
+                <h2 className="text-2xl font-bold text-green-400 mb-4">
+                  {program.program_title}
+                </h2>
+                
+                {/* Program Summary */}
+                <div className="mb-6 p-4 bg-gray-900 rounded border border-green-600">
+                  <h3 className="text-lg font-bold mb-2 text-green-300">Описание программы:</h3>
+                  <p className="text-green-200 leading-relaxed">{program.program_summary}</p>
+                </div>
+
+                {/* Subgroups */}
+                <div className="space-y-6">
+                  {program.subgroups.map((subgroup, subgroupIndex) => (
+                    <div key={subgroupIndex} className="border border-green-600 rounded p-4">
+                      <h3 className="text-xl font-bold text-green-300 mb-3">
+                        {subgroup.subgroup_type}
+                      </h3>
+                      <p className="text-green-200 mb-4">{subgroup.subgroup_description}</p>
+
+                      {/* Directions */}
+                      <div className="space-y-4">
+                        {subgroup.directions.map((direction, directionIndex) => (
+                          <div key={directionIndex} className="border border-green-700 rounded p-4 bg-gray-900">
+                            {/* Direction Header */}
+                            <div className="flex items-start justify-between mb-3">
+                              <div className="flex-1">
+                                <div className="flex items-center gap-3 mb-2">
+                                  <span className="text-2xl font-bold text-green-400">#{direction.rank}</span>
+                                  <span className={`px-3 py-1 rounded text-xs font-bold text-white ${getTypeColor(direction.research_type)}`}>
+                                    {direction.research_type}
+                                  </span>
+                                </div>
+                                <h4 className="text-lg font-bold text-green-300">{direction.title}</h4>
+                              </div>
+                              <div className="text-right">
+                                <div className={`text-2xl font-bold ${getScoreColor(direction.critique.final_score)}`}>
+                                  {direction.critique.final_score.toFixed(1)}
+                                </div>
+                                <div className="text-sm text-green-400">Итого</div>
+                              </div>
+                            </div>
+
+                            {/* Description */}
+                            <div className="mb-4">
+                              <p className="text-green-200 leading-relaxed">{direction.description}</p>
+                            </div>
+
+                            {/* Scores */}
+                            <div className="grid grid-cols-3 gap-4 mb-4 p-3 bg-black rounded border border-green-800">
+                              <div className="text-center">
+                                <div className={`text-lg font-bold ${getScoreColor(direction.critique.novelty_score)}`}>
+                                  {direction.critique.novelty_score.toFixed(1)}
+                                </div>
+                                <div className="text-xs text-green-400">Новизна</div>
+                              </div>
+                              <div className="text-center">
+                                <div className={`text-lg font-bold ${getScoreColor(direction.critique.impact_score)}`}>
+                                  {direction.critique.impact_score.toFixed(1)}
+                                </div>
+                                <div className="text-xs text-green-400">Влияние</div>
+                              </div>
+                              <div className="text-center">
+                                <div className={`text-lg font-bold ${getScoreColor(direction.critique.feasibility_score)}`}>
+                                  {direction.critique.feasibility_score.toFixed(1)}
+                                </div>
+                                <div className="text-xs text-green-400">Выполнимость</div>
+                              </div>
+                            </div>
+
+                            {/* Strengths and Weaknesses */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                              <div>
+                                <h5 className="font-bold text-green-300 mb-2">Сильные стороны:</h5>
+                                <ul className="space-y-1">
+                                  {direction.critique.strengths.map((strength, idx) => (
+                                    <li key={idx} className="text-green-200 text-sm">• {strength}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div>
+                                <h5 className="font-bold text-red-300 mb-2">Слабые стороны:</h5>
+                                <ul className="space-y-1">
+                                  {direction.critique.weaknesses.map((weakness, idx) => (
+                                    <li key={idx} className="text-red-200 text-sm">• {weakness}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+
+                            {/* Recommendation and Papers */}
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-4">
+                                <span className="font-bold text-green-300">Рекомендация:</span>
+                                <span className={`px-3 py-1 rounded text-sm font-bold ${
+                                  direction.critique.recommendation === 'Strongly Recommend' 
+                                    ? 'bg-green-600 text-white' 
+                                    : 'bg-yellow-600 text-white'
+                                }`}>
+                                  {direction.critique.recommendation}
+                                </span>
+                              </div>
+                              <div className="text-sm text-green-400">
+                                Статей: {direction.supporting_papers.length}
+                              </div>
+                            </div>
+
+                            {/* Links to Graph */}
+                            {direction.supporting_papers.length > 0 && (
+                              <div className="flex flex-wrap gap-2">
+                                <a 
+                                  href={`/graph?highlight=${direction.supporting_papers.join(',')}&search=open`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-3 py-1 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold rounded border border-purple-400 transition-all duration-200"
+                                >
+                                  Показать статьи в графе
+                                </a>
+                                {direction.supporting_papers.map((paperId, idx) => (
+                                  <a 
+                                    key={idx}
+                                    href={`/graph?focus=${paperId}&highlight=${direction.supporting_papers.join(',')}&search=open`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded border border-blue-400 transition-all duration-200"
+                                    title={`Фокус на статье ${paperId}`}
+                                  >
+                                    🔍 {paperId}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
