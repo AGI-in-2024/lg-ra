@@ -33,7 +33,7 @@ export default function GraphPage() {
               href="/"
               className="px-4 py-2 bg-green-600 hover:bg-green-500 text-black font-bold rounded border-2 border-green-400 transition-all duration-200"
             >
-              НАЗАД В ЧАТ
+              Главная
             </Link>
           </div>
         </div>

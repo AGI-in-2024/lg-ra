@@ -28,7 +28,7 @@ interface GraphData {
 
 export async function GET() {
   try {
-    const graphmlPath = 'public/longevity_knowledge_graph.graphml';
+    const graphmlPath = 'public/dataset1/longevity_knowledge_graph.graphml';
     
     if (!fs.existsSync(graphmlPath)) {
       return NextResponse.json({ error: 'GraphML file not found' }, { status: 404 });
