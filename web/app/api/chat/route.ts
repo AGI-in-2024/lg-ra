@@ -144,7 +144,7 @@ export async function POST(request: NextRequest) {
       : message;
     
     const response = await model({
-      model: "gemini-2.0-flash-exp",
+      model: "gemini-2.5-flash",
       contents: prompt,
     });
     
