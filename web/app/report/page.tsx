@@ -52,7 +52,7 @@ export default function ReportPage() {
 
   const loadReportData = async () => {
     try {
-      const response = await fetch('/dataset1/hierarchical_research_report.json');
+      const response = await fetch('/data/dataset1/hierarchical_research_report.json');
       if (!response.ok) {
         throw new Error('Ошибка загрузки отчета');
       }
