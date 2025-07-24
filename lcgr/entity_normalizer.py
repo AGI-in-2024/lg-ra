@@ -99,6 +99,7 @@ Your response MUST be a JSON array of objects with canonical names and their ali
             
             # Вызываем LLM с структурированным выводом (нативный Google API)
             response = self.google_client.models.generate_content(
+                # model="gemini-2.5-flash"
                 model="gemini-2.5-flash",
                 contents=prompt.format(entity_list=entity_list_json),
                 config={

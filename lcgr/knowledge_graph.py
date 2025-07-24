@@ -73,7 +73,7 @@ class ScientificKnowledgeGraph:
     def _extract_scientific_concepts(self, paper_id: str, text: str) -> ExtractedKnowledge:
         """Извлекает научные концепты из текста статьи"""
         # Ограничиваем текст если он слишком большой
-        text_for_prompt = text[:80000] + ("..." if len(text) > 80000 else "")
+        text_for_prompt = text[:200000] + ("..." if len(text) > 80000 else "")
         
         prompt_text = f"""
         You are an expert in scientific research methodology and bioinformatics.

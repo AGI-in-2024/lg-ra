@@ -27,14 +27,27 @@ except ImportError:
     from models import ArxivQuery, PaperInfo, PaperAnalysis, RankedPaper
     from config import DEFAULT_MAX_RESULTS
 
+# Импорт data_loader для работы с PDF файлами
+try:
+    import sys
+    from pathlib import Path
+    sys.path.append(str(Path(__file__).parent.parent.parent / "lcgr"))
+    from data_loader import load_documents
+except ImportError:
+    print("⚠️ Модуль data_loader не найден. Анализ PDF файлов будет недоступен.")
+    load_documents = None
+
 
 class ArxivAnalyzer:
     """Основной класс для анализа статей arXiv с поддержкой отслеживания прогресса"""
     
-    def __init__(self, enable_state_tracking: bool = True, custom_output_dir: Optional[str] = None):
+    def __init__(self, enable_state_tracking: bool = True, custom_output_dir: Optional[str] = None, pdf_directory: Optional[str] = None):
         self.query_generator = QueryGenerator()
         self.paper_analyzer = PaperAnalyzer()
         self.priority_ranker = PriorityRanker()
+        
+        # Папка с PDF файлами для анализа
+        self.pdf_directory = pdf_directory or "lcgr/downloaded_pdfs/references_dlya_statiy_2025"
         
         # Менеджер состояния с улучшенной структурой путей
         self.enable_state_tracking = enable_state_tracking
@@ -317,6 +330,160 @@ class ArxivAnalyzer:
         
         return result
     
+    async def run_pdf_analysis(
+        self,
+        max_papers: int = 50,
+        use_llm_ranking: bool = True,
+        use_cache: bool = True,
+        max_workers: int = 4
+    ) -> Dict:
+        """Анализирует PDF файлы из указанной папки
+        
+        Args:
+            max_papers: Максимум статей для анализа
+            use_llm_ranking: Использовать LLM для ранжирования  
+            use_cache: Использовать кэш для PDF файлов
+            max_workers: Количество потоков для обработки PDF
+        """
+        
+        if load_documents is None:
+            return {"error": "Модуль data_loader не доступен"}
+        
+        start_time = time.time()
+        print(f"🚀 Запуск анализа PDF файлов из папки: {self.pdf_directory}")
+        
+        # Показываем текущий прогресс если включено отслеживание состояния
+        if self.enable_state_tracking and self.state_manager:
+            self.state_manager.print_progress_summary()
+        
+        # Этап 1: Загрузка PDF файлов
+        print(f"\n📁 Этап 1: Загрузка PDF файлов из {self.pdf_directory}...")
+        try:
+            documents = load_documents(
+                data_source=self.pdf_directory,
+                use_cache=use_cache,
+                max_workers=max_workers
+            )
+            
+            if not documents:
+                return {"error": f"Не найдено PDF файлов в папке {self.pdf_directory}"}
+            
+            # Ограничиваем количество документов
+            if len(documents) > max_papers:
+                documents = dict(list(documents.items())[:max_papers])
+                print(f"   ⚠️  Ограничено до {max_papers} файлов")
+            
+            print(f"✅ Загружено {len(documents)} PDF файлов")
+            
+        except Exception as e:
+            print(f"❌ Ошибка загрузки PDF файлов: {e}")
+            return {"error": f"Ошибка загрузки PDF файлов: {e}"}
+        
+        # Преобразуем документы в формат PaperInfo для анализа
+        papers = []
+        for paper_id, doc_data in documents.items():
+            # Создаем минимальную информацию о статье из PDF
+            paper_info = PaperInfo(
+                title=f"PDF Document: {paper_id}",
+                authors=[],
+                abstract=doc_data["full_text"][:1000],  # Первые 1000 символов как аннотация
+                arxiv_id=paper_id,
+                pdf_url="",
+                published=str(doc_data.get("year", 2024)),
+                categories=[]
+            )
+            papers.append(paper_info)
+        
+        # Начинаем новую сессию
+        session_id = None
+        if self.enable_state_tracking and self.state_manager:
+            session_id = self.state_manager.start_session(f"PDF Analysis: {self.pdf_directory}", [])
+            print(f"📋 Начата сессия: {session_id}")
+        
+        # Этап 2: Анализ документов по чеклисту
+        print(f"\n🧠 Этап 2: Анализ {len(papers)} документов по чеклисту...")
+        try:
+            # Заменяем содержимое статей полным текстом из PDF
+            for i, paper in enumerate(papers):
+                paper_id = paper.arxiv_id
+                if paper_id in documents:
+                    # Заменяем аннотацию полным текстом
+                    paper.abstract = documents[paper_id]["full_text"]
+            
+            analyses = await self.paper_analyzer.analyze_papers_batch(
+                papers, 
+                max_concurrent=3
+            )
+            print(f"✅ Проанализировано {len(analyses)} документов")
+            
+            # Сохраняем анализы в состояние
+            if self.enable_state_tracking and self.state_manager and session_id:
+                for analysis in analyses:
+                    self.state_manager.save_paper_analysis(analysis, session_id)
+                print("💾 Анализы сохранены в состояние")
+            
+            # Показываем краткую статистику
+            valid_analyses = [a for a in analyses if a.overall_score > 0.1]
+            avg_score = sum(a.overall_score for a in valid_analyses) / len(valid_analyses) if valid_analyses else 0
+            print(f"   📊 Средняя оценка релевантности: {avg_score:.2f}")
+            
+        except Exception as e:
+            print(f"❌ Ошибка анализа документов: {e}")
+            return {"error": f"Ошибка анализа документов: {e}"}
+        
+        # Этап 3: Ранжирование по приоритетности
+        print("\n📊 Этап 3: Ранжирование документов по приоритетности...")
+        try:
+            if use_llm_ranking:
+                ranked_papers = await self.priority_ranker.rank_papers_with_llm(analyses)
+                print("✅ Ранжирование с LLM анализом завершено")
+            else:
+                ranked_papers = self.priority_ranker.rank_papers_simple(analyses)
+                print("✅ Простое ранжирование завершено")
+            
+            # Сохраняем результаты ранжирования
+            if self.enable_state_tracking and self.state_manager and session_id:
+                self.state_manager.save_ranking_session(ranked_papers, session_id)
+                print("💾 Ранжирование сохранено в состояние")
+            
+            # Статистика ранжирования
+            summary = self.priority_ranker.get_ranking_summary(ranked_papers)
+            print(f"   🏆 Топ документ: {summary['top_paper']['title'][:50]}..." if summary['top_paper'] else "")
+            print(f"   📈 Средняя оценка топ-5: {summary['top_5_avg_score']:.2f}")
+            
+        except Exception as e:
+            print(f"❌ Ошибка ранжирования: {e}")
+            return {"error": f"Ошибка ранжирования: {e}"}
+        
+        # Завершение сессии
+        if self.enable_state_tracking and self.state_manager and session_id:
+            self.state_manager.complete_session(session_id, len(papers))
+            print(f"✅ Сессия {session_id} завершена")
+        
+        # Завершение
+        end_time = time.time()
+        duration = end_time - start_time
+        print(f"\n🎉 Анализ PDF файлов завершен за {duration:.1f} секунд")
+        
+        # Формируем результат
+        result = {
+            "timestamp": datetime.now().isoformat(),
+            "session_id": session_id,
+            "duration_seconds": duration,
+            "analysis_type": "pdf_analysis",
+            "pdf_directory": self.pdf_directory,
+            "statistics": {
+                "pdf_files_loaded": len(documents),
+                "papers_analyzed": len(analyses),
+                "valid_analyses": len([a for a in analyses if a.overall_score > 0.1])
+            },
+            "ranking_summary": summary,
+            "top_papers": self._format_top_papers(ranked_papers[:10]),
+            "full_results": ranked_papers
+        }
+        
+        return result
+    
     def show_progress(self) -> Dict:
         """Показывает текущий прогресс анализа"""
         if not self.enable_state_tracking or not self.state_manager:
@@ -550,13 +717,62 @@ class ArxivAnalyzer:
 
 async def main():
     """Основная функция для тестирования"""
+    
+    # Пример 1: Анализ arXiv статей (оригинальная функциональность)
+    print("=" * 60)
+    print("📖 АНАЛИЗ ARXIV СТАТЕЙ")
+    print("=" * 60)
+    
     analyzer = ArxivAnalyzer()
     
-    # Запускаем полный анализ
     results = await analyzer.run_full_analysis(
         max_papers_per_query=5,  # Меньше для тестирования
         max_total_papers=20,     # Меньше для тестирования
         use_llm_ranking=True
+    )
+    
+    analyzer.print_summary(results)
+    
+    if 'error' not in results:
+        await analyzer.save_results(results, custom_dir=analyzer.custom_output_dir)
+    
+    print("\n" + "=" * 60)
+    print("📁 АНАЛИЗ PDF ФАЙЛОВ")
+    print("=" * 60)
+    
+    # Пример 2: Анализ PDF файлов из указанной папки
+    pdf_analyzer = ArxivAnalyzer(
+        pdf_directory="lcgr/downloaded_pdfs/references_dlya_statiy_2025"
+    )
+    
+    # Запускаем анализ PDF файлов
+    pdf_results = await pdf_analyzer.run_pdf_analysis(
+        max_papers=10,           # Максимум PDF для анализа
+        use_llm_ranking=True,
+        use_cache=True,
+        max_workers=4
+    )
+    
+    # Выводим сводку
+    pdf_analyzer.print_summary(pdf_results)
+    
+    # Сохраняем результаты
+    if 'error' not in pdf_results:
+        await pdf_analyzer.save_results(pdf_results, filename="pdf_analysis_results.json")
+
+
+async def analyze_pdf_folder(pdf_directory: str = "lcgr/downloaded_pdfs/references_dlya_statiy_2025"):
+    """Простая функция для анализа PDF файлов из указанной папки"""
+    print(f"🚀 Быстрый анализ PDF файлов из папки: {pdf_directory}")
+    
+    analyzer = ArxivAnalyzer(pdf_directory=pdf_directory)
+    
+    # Запускаем анализ
+    results = await analyzer.run_pdf_analysis(
+        max_papers=100,
+        use_llm_ranking=True,
+        use_cache=True,
+        max_workers=30
     )
     
     # Выводим сводку
@@ -564,7 +780,10 @@ async def main():
     
     # Сохраняем результаты
     if 'error' not in results:
-        await analyzer.save_results(results, custom_dir=analyzer.custom_output_dir)
+        saved_path = await analyzer.save_results(results, filename="pdf_analysis_results.json")
+        print(f"💾 Результаты сохранены: {saved_path}")
+    
+    return results
 
 
 if __name__ == "__main__":

@@ -1,280 +1,1109 @@
 {
-  "ebselen": [
-    "ebselen"
+  "3-M syndrome": [
+    "3-M syndrome",
+    "3M-syndrome"
   ],
-  "naloxone": [
-    "naloxone"
+  "ADAM15": [
+    "ADAM15"
   ],
-  "CART": [
-    "CART"
+  "ADORA1": [
+    "ADORA1"
   ],
-  "stroke": [
-    "stroke"
+  "AIF": [
+    "AIF"
   ],
-  "Nitrendipine": [
-    "Nitrendipine"
+  "AKT1": [
+    "AKT1",
+    "Akt"
   ],
-  "ANGPT2": [
-    "ANGPT2"
+  "ALIX": [
+    "ALIX"
   ],
-  "NPY": [
-    "NPY"
+  "ALP1": [
+    "ALP1"
   ],
-  "Angiotensin II": [
-    "Angiotensin II"
+  "AMPA-R": [
+    "AMPA-R"
   ],
-  "GSK3ẞ": [
-    "GSK3ẞ"
+  "ANNA-1": [
+    "ANNA-1"
   ],
-  "Atrial natriuretic factor": [
-    "Atrial natriuretic factor"
+  "APOC3": [
+    "APOC3"
   ],
-  "Heart Failure": [
-    "Heart Failure"
+  "APOE": [
+    "APOE"
   ],
-  "Paracetamol": [
-    "paracetamol",
-    "Paracetamol"
+  "AR": [
+    "AR"
   ],
-  "Diabetes": [
-    "Diabetes"
+  "ARC": [
+    "ARC",
+    "Arc"
   ],
-  "tenascin C": [
-    "tenascin C"
+  "ASF1B": [
+    "ASF1B"
   ],
-  "mortality": [
-    "mortality"
+  "AXL": [
+    "AXL"
   ],
-  "MTORC1": [
-    "MTORC1"
+  "Abp1": [
+    "Abp1"
   ],
-  "POMC": [
-    "POMC"
+  "Actin": [
+    "Actin"
   ],
-  "GLP-1R": [
-    "Glp1r",
-    "GLP-1R"
+  "Age-related macular degeneration": [
+    "age-related macular degeneration"
   ],
-  "CRP": [
-    "CRP"
+  "Akap10": [
+    "Akap10"
   ],
-  "Semaglutide": [
-    "Semaglutide",
-    "semaglutide"
+  "Alanine aminotransferase": [
+    "alanine aminotransferase"
   ],
-  "nephritis": [
-    "nephritis"
+  "Alcoholic cirrhosis": [
+    "alcoholic cirrhosis"
   ],
-  "ghrelin": [
-    "ghrelin"
+  "Alzheimer's disease": [
+    "Alzheimer's disease"
   ],
-  "Perindopril": [
-    "perindopril",
-    "Perindopril"
+  "Amphiphysin": [
+    "Amphiphysin"
   ],
-  "diclofenac": [
-    "diclofenac"
+  "ApoA": [
+    "ApoA"
   ],
-  "PPGNTS": [
-    "PPGNTS"
+  "Apoptosis": [
+    "apoptosis",
+    "cell death"
   ],
-  "Renin": [
-    "Renin"
+  "ArnA": [
+    "ArnA"
   ],
-  "Captopril": [
-    "Captopril"
+  "Atopic dermatitis": [
+    "atopic dermatitis"
   ],
-  "Resveratrol": [
-    "Resveratrol",
-    "RESV"
+  "BDNF": [
+    "BDNF"
   ],
-  "dapagliflozin": [
-    "dapagliflozin"
+  "BMP": [
+    "BMP"
   ],
-  "NCAM1": [
-    "NCAM1"
+  "BMP15": [
+    "BMP15"
   ],
-  "aspirin": [
-    "aspirin"
+  "BMPR1B": [
+    "BMPR1B"
   ],
-  "GLP-1": [
-    "GLP-1"
+  "Bak": [
+    "Bak"
   ],
-  "adiponectin": [
-    "adiponectin"
+  "Bax": [
+    "Bax"
   ],
-  "Enalaprilat": [
-    "Enalaprilat"
+  "Bcl-2": [
+    "Bcl-2"
   ],
-  "Angiotensin I": [
-    "Angiotensin I"
+  "Bcl-XL": [
+    "Bcl-X(L)",
+    "Bcl-X₁",
+    "Bcl-XL"
   ],
-  "NT-proBNP": [
-    "NT-proBNP"
+  "Breast cancer": [
+    "breast cancer",
+    "breast tumors"
   ],
-  "MSR1": [
-    "MSR1"
+  "CA": [
+    "CA"
   ],
-  "oxytocin": [
-    "oxytocin"
+  "CASPR2": [
+    "CASPR2"
   ],
-  "Osteoarthritis": [
-    "Osteoarthritis"
+  "CCDC8": [
+    "CCDC8"
   ],
-  "cfChPs": [
-    "cfChPs"
+  "CCDC112": [
+    "CCDC112"
   ],
-  "L-Trp": [
-    "L-Trp"
+  "CCNB1": [
+    "CCNB1",
+    "CcnB1"
   ],
-  "INAD": [
-    "INAD"
+  "CD3": [
+    "CD3"
   ],
-  "ACE inhibitors": [
-    "ACE inhibitors",
-    "ACEIs",
-    "ACEI"
+  "CD8": [
+    "CD8"
   ],
-  "AgRP": [
-    "AgRP"
+  "CD33": [
+    "CD33"
   ],
-  "BCl-2": [
-    "BCl-2"
+  "CD36": [
+    "CD36"
   ],
-  "HbA1c": [
-    "HbA1c"
+  "CD90": [
+    "CD90"
   ],
-  "codeine": [
-    "codeine"
+  "CD300e": [
+    "CD300e"
   ],
-  "Prostaglandins": [
-    "Prostaglandins"
+  "CDKN1A": [
+    "CDKN1A"
   ],
-  "Perindoprilat": [
-    "Perindoprilat"
+  "CDKN2A": [
+    "CDKN2A"
   ],
-  "Essential hypertension": [
-    "Essential hypertension"
+  "CDC34": [
+    "CDC34"
+  ],
+  "CEBPD": [
+    "CEBPD"
+  ],
+  "CGINI": [
+    "CGINI"
+  ],
+  "CLB3": [
+    "CLB3"
+  ],
+  "CPEB1": [
+    "CPEB1"
   ],
   "CREB": [
     "CREB"
   ],
-  "leptin": [
-    "leptin"
+  "CRMP5": [
+    "CRMP5"
   ],
-  "liraglutide": [
-    "liraglutide"
+  "CUL7": [
+    "CUL7"
   ],
-  "thrombospondin 2": [
-    "thrombospondin 2"
+  "CYB5A": [
+    "CYB5A"
   ],
-  "Ibuprofen": [
-    "Ibuprofen"
+  "CYP3A7": [
+    "CYP3A7"
   ],
-  "Hypertension": [
-    "Hypertension"
+  "CYP11A1": [
+    "CYP11A1"
   ],
-  "apoptosis": [
-    "apoptosis"
+  "CYP11B2": [
+    "CYP11B2"
   ],
-  "PPG": [
-    "PPG"
+  "CYP17A1": [
+    "CYP17A1"
   ],
-  "kynurenine": [
-    "kynurenine"
+  "CYP19A1": [
+    "CYP19A1"
   ],
-  "IGFBP": [
-    "IGFBP"
+  "CYP2C8": [
+    "CYP2C8"
   ],
-  "insulin resistance": [
-    "insulin resistance"
+  "CYP2C9": [
+    "CYP2C9"
   ],
-  "SIRD": [
-    "SIRD"
+  "CYP2D6": [
+    "CYP2D6"
   ],
-  "UNC5D": [
-    "UNC5D"
+  "Cancer": [
+    "cancers",
+    "tumors"
   ],
-  "dextropropoxyphene": [
-    "dextropropoxyphene"
+  "Cas1": [
+    "Cas1"
   ],
-  "GABA": [
-    "GABA"
+  "Cas9": [
+    "Cas9",
+    "SpCas9"
   ],
-  "Oxtr": [
-    "Oxtr"
+  "Caspase-3": [
+    "caspase-3"
   ],
-  "pentazocine": [
-    "pentazocine"
+  "Caspase-7": [
+    "caspase-7"
+  ],
+  "Caspase-8": [
+    "Casp8",
+    "caspase-8"
+  ],
+  "Caspase-9": [
+    "caspase-9"
+  ],
+  "Casposons": [
+    "Casposons"
+  ],
+  "Cell cycle": [
+    "cell cycle"
+  ],
+  "Cenpe": [
+    "Cenpe"
+  ],
+  "Chronic kidney disease": [
+    "chronic kidney disease"
+  ],
+  "Chromosome": [
+    "Chromosome"
+  ],
+  "Crohn's disease": [
+    "Crohn's disease"
+  ],
+  "Cytochalasin D": [
+    "Cytochalasin D"
+  ],
+  "Cytochrome c": [
+    "Cyto c",
+    "cytochrome c"
+  ],
+  "Cystatin C": [
+    "cystatin C"
+  ],
+  "DAZL": [
+    "DAZL",
+    "Dazl"
+  ],
+  "DDX4": [
+    "DDX4"
   ],
   "DNA": [
     "DNA"
   ],
-  "cancer": [
-    "cancer"
+  "DNMT1": [
+    "DNMT1"
   ],
-  "Microcebus murinus": [
-    "Microcebus murinus"
+  "DNMT3A": [
+    "DNMT3A"
   ],
-  "exenatide": [
-    "exenatide"
+  "DNMT3B": [
+    "DNMT3B"
   ],
-  "Myocardial Infarction": [
-    "Myocardial Infarction",
-    "myocardial infarction"
+  "DMRT1": [
+    "DMRT1"
   ],
-  "IDO1": [
-    "IDO1"
+  "Diabetes": [
+    "diabetes"
   ],
-  "type 2 diabetes mellitus": [
-    "type 2 diabetes mellitus"
+  "Disease": [
+    "Disease"
   ],
-  "Tramadol": [
-    "Tramadol"
+  "Doxorubicin": [
+    "doxorubicin"
   ],
-  "Bradykinin": [
-    "Bradykinin"
+  "E. coli": [
+    "E. coli"
   ],
-  "morphine": [
-    "morphine"
+  "ERK1/2": [
+    "Erk1/2"
   ],
-  "CD68": [
-    "CD68"
+  "ERV-L": [
+    "ERV-L"
   ],
-  "Enalapril": [
-    "Enalapril"
+  "ESPL1": [
+    "ESPL1"
   ],
-  "Hydrochlorothiazide": [
-    "Hydrochlorothiazide"
+  "ESR1": [
+    "ESR1"
   ],
-  "IDO2": [
-    "IDO2"
+  "ESR2": [
+    "ESR2"
   ],
-  "SIDD": [
-    "SIDD"
+  "ETOP": [
+    "ETOP"
   ],
-  "DTA": [
-    "DTA"
+  "EXO1": [
+    "EXO1"
   ],
-  "Pla2g6": [
-    "Pla2g6"
+  "Endometrial cancer": [
+    "endometrial cancer"
   ],
-  "CD93": [
-    "CD93"
+  "Ens-1/Erni": [
+    "Ens-1/Erni"
   ],
-  "ARC": [
-    "ARC"
+  "Env": [
+    "Env"
   ],
-  "ACE": [
-    "ACE"
+  "FAM118A": [
+    "FAM118A"
   ],
-  "Atenolol": [
-    "Atenolol"
+  "FGF": [
+    "FGF",
+    "FGF11"
   ],
-  "NFK": [
-    "NFK"
+  "FGFR3": [
+    "FGFR3"
   ],
-  "GHR": [
-    "GHR"
+  "FKBP4": [
+    "FKBP4"
+  ],
+  "FNDC9": [
+    "FNDC9"
+  ],
+  "FSHB": [
+    "FSHB"
+  ],
+  "Fas": [
+    "Fas"
+  ],
+  "FasL": [
+    "FasL"
+  ],
+  "Filaggrin": [
+    "Filaggrin"
+  ],
+  "Fv1": [
+    "Fv-4",
+    "Fv1",
+    "Fvl"
+  ],
+  "GABA-B-R": [
+    "GABA-B-R"
+  ],
+  "GCKR": [
+    "GCKR"
+  ],
+  "GDF9": [
+    "GDF9"
+  ],
+  "GFP": [
+    "GFP"
+  ],
+  "GFRA1": [
+    "GFRA1"
+  ],
+  "GJA1": [
+    "GJA1"
+  ],
+  "GJA4": [
+    "GJA4"
+  ],
+  "GSK3B": [
+    "Gsk3ẞ"
+  ],
+  "GTSE1": [
+    "GTSE1"
+  ],
+  "GYPC": [
+    "GYPC"
+  ],
+  "Gag": [
+    "Gag",
+    "gag"
+  ],
+  "Gag3": [
+    "Gag3"
+  ],
+  "Gene": [
+    "Gene"
+  ],
+  "Germ cell": [
+    "Germ cell"
+  ],
+  "Gin-1": [
+    "Gin-1"
+  ],
+  "Gin-2": [
+    "Gin-2"
+  ],
+  "Glioma": [
+    "gliomas"
+  ],
+  "Gout": [
+    "gout"
+  ],
+  "HDL": [
+    "HDL"
+  ],
+  "HFE": [
+    "HFE"
+  ],
+  "HGFAC": [
+    "HGFAC"
+  ],
+  "HIV-1": [
+    "HIV-1"
+  ],
+  "HMGA1": [
+    "HMGA1"
+  ],
+  "HORMADI": [
+    "HORMADI"
+  ],
+  "HSD3B2": [
+    "HSD3B2"
+  ],
+  "HSD17B1": [
+    "HSD17B1"
+  ],
+  "Hemagglutinin": [
+    "HA",
+    "hemagglutinin",
+    "influenza hemagglutinin"
+  ],
+  "Hemochromatosis": [
+    "hemochromatosis"
+  ],
+  "Hepatocyte growth factor": [
+    "hepatocyte growth factor"
+  ],
+  "Hu": [
+    "Hu"
+  ],
+  "IGF-1": [
+    "IGF-1"
+  ],
+  "IGF1R": [
+    "IGF1R"
+  ],
+  "IL6R": [
+    "IL6R"
+  ],
+  "IME1": [
+    "IME1",
+    "IMEI",
+    "Ime1"
+  ],
+  "Inflammatory bowel disease": [
+    "inflammatory bowel disease"
+  ],
+  "Influenza virus": [
+    "influenza A virus",
+    "influenza virus"
+  ],
+  "KDM4C": [
+    "KDM4C"
+  ],
+  "KIF4A": [
+    "KIF4A"
+  ],
+  "KIF11": [
+    "KIF11"
+  ],
+  "KITL": [
+    "KITL"
+  ],
+  "KLHL11": [
+    "KLHL11"
+  ],
+  "L1TD1": [
+    "L1TD1"
+  ],
+  "LCP2": [
+    "LCP2"
+  ],
+  "LEPR": [
+    "LEPR"
+  ],
+  "LHB": [
+    "LHB"
+  ],
+  "LINE-1": [
+    "LINE-1"
+  ],
+  "LGI1": [
+    "LGI1"
+  ],
+  "LIN28B": [
+    "LIN28B"
+  ],
+  "Lung cancer": [
+    "lung cancer",
+    "lung tumor"
+  ],
+  "MAD2L1": [
+    "MAD2LI",
+    "MAD2L1"
+  ],
+  "MAIL1": [
+    "MAIL1"
+  ],
+  "MAIN": [
+    "MAIN"
+  ],
+  "MAP-1": [
+    "MAP-1"
+  ],
+  "MAP3K5": [
+    "MAP3K5"
+  ],
+  "MC4R": [
+    "MC4R"
+  ],
+  "MCHR2": [
+    "MCHR2"
+  ],
+  "MG132": [
+    "MG132"
+  ],
+  "MKRN3": [
+    "MKRN3"
+  ],
+  "MOAP-1": [
+    "MOAP-1"
+  ],
+  "MT-ATP6": [
+    "MT-ATP6"
+  ],
+  "MTCH2": [
+    "MTCH2"
+  ],
+  "MZFI": [
+    "MZFI"
+  ],
+  "Meiosis": [
+    "meiosis",
+    "meiosis I",
+    "oocyte meiosis"
+  ],
+  "Mental retardation": [
+    "mental retardation"
+  ],
+  "Metabolic diseases": [
+    "metabolic diseases"
+  ],
+  "Microtubules": [
+    "Microtubules"
+  ],
+  "Mybl1": [
+    "Mybl1"
+  ],
+  "NANOG": [
+    "NANOG"
+  ],
+  "NC": [
+    "NC"
+  ],
+  "NMDA-R": [
+    "NMDA-R"
+  ],
+  "NOA": [
+    "NOA"
+  ],
+  "NORAD": [
+    "NORAD"
+  ],
+  "NPR2": [
+    "NPR2"
+  ],
+  "NR3C1": [
+    "NR3C1"
+  ],
+  "NR5A1": [
+    "NR5A1"
+  ],
+  "NTF4": [
+    "NTF4"
+  ],
+  "N2a cells": [
+    "N2a cells"
+  ],
+  "Ncx1": [
+    "Ncx1"
+  ],
+  "Ndt80": [
+    "Ndt80"
+  ],
+  "Nin": [
+    "Nin"
+  ],
+  "NIXI": [
+    "NIXI"
+  ],
+  "Nsf": [
+    "Nsf"
+  ],
+  "Nycodenz": [
+    "Nycodenz"
+  ],
+  "OBSL-1": [
+    "OBSL-1"
+  ],
+  "Oocyte": [
+    "Oocyte"
+  ],
+  "Ovarian cancer": [
+    "ovarian cancer"
+  ],
+  "PCA-1": [
+    "PCA-1"
+  ],
+  "PD-L1": [
+    "PD-L1"
+  ],
+  "PDE3B": [
+    "PDE3B"
+  ],
+  "PDE10A": [
+    "PDE10A"
+  ],
+  "PEG10": [
+    "MmPEG10",
+    "MmPeg10",
+    "PEG10",
+    "Peg10"
+  ],
+  "PEG3": [
+    "PEG3"
+  ],
+  "PFN1": [
+    "PFN1"
+  ],
+  "PGR": [
+    "PGR",
+    "PR"
+  ],
+  "PHLDA3": [
+    "PHLDA3"
+  ],
+  "PIF": [
+    "PIF"
+  ],
+  "PIWIL4": [
+    "PIWIL4"
+  ],
+  "PNMA": [
+    "PNMA"
+  ],
+  "PNMA1": [
+    "PNMA1",
+    "Pnmal"
+  ],
+  "PNMA10": [
+    "PNMA10",
+    "Pnma10/SIZNI"
+  ],
+  "PNMA2": [
+    "PNMA2"
+  ],
+  "PNMA4": [
+    "PNMA4",
+    "Pnma4"
+  ],
+  "PNMA5": [
+    "PNMA5",
+    "Pnma5"
+  ],
+  "PNMA6A/B": [
+    "PNMA6A/B"
+  ],
+  "PNMA6E/F": [
+    "PNMA6E/F"
+  ],
+  "PNMA6F": [
+    "PNMA6F"
+  ],
+  "PNMA7A": [
+    "PNMA7A"
+  ],
+  "PNMA7B": [
+    "PNMA7B"
+  ],
+  "PNMA8A": [
+    "PNMA8A"
+  ],
+  "PNMA8B": [
+    "PNMA8B"
+  ],
+  "PNMA8C": [
+    "PNMA8C"
+  ],
+  "POR": [
+    "POR"
+  ],
+  "POU5F1": [
+    "POU5F1"
+  ],
+  "PRC1": [
+    "PRC1"
+  ],
+  "PRDM13": [
+    "PRDM13"
+  ],
+  "PRLR": [
+    "PRLR"
+  ],
+  "PTK2": [
+    "PTK2"
+  ],
+  "PKA": [
+    "PKA",
+    "protein kinase A"
+  ],
+  "Pgm": [
+    "Pgm"
+  ],
+  "PiggyMac": [
+    "PiggyMac"
+  ],
+  "Pnma14/CCDC8": [
+    "Pnma14/CCDC8"
+  ],
+  "Polycystic ovary syndrome": [
+    "PCOS",
+    "polycystic ovary syndrome"
+  ],
+  "Prostate cancer": [
+    "prostate cancer"
+  ],
+  "Pum2": [
+    "Pum2"
+  ],
+  "Pumilio": [
+    "PUM",
+    "Pumilio"
+  ],
+  "RAD18": [
+    "RAD18"
+  ],
+  "RAD21": [
+    "RAD21"
+  ],
+  "RAD51": [
+    "RAD51"
+  ],
+  "RAG1": [
+    "RAG1"
+  ],
+  "RAG2": [
+    "RAG2"
+  ],
+  "RASSF": [
+    "RASSF",
+    "RASSF1A"
+  ],
+  "RET": [
+    "RET"
+  ],
+  "RICTOR": [
+    "RICTOR"
+  ],
+  "Rim4": [
+    "Rim4"
+  ],
+  "RNA": [
+    "RNA"
+  ],
+  "RTL1": [
+    "PEG11/RTL1",
+    "Peg 11/Rtl",
+    "Peg11/Rtl1",
+    "Peg11/Rtll",
+    "RTL1"
+  ],
+  "RTL3": [
+    "RTL3"
+  ],
+  "RTL5": [
+    "RTL5"
+  ],
+  "RTL6": [
+    "RTL6"
+  ],
+  "RTL8": [
+    "RTL8",
+    "RTL8A/B/C"
+  ],
+  "RTL9": [
+    "RIEI",
+    "Riel",
+    "RTL9"
+  ],
+  "RTL10": [
+    "RTL10"
+  ],
+  "Ras": [
+    "K-Ras",
+    "Ras"
+  ],
+  "Rec8": [
+    "Rec8"
+  ],
+  "SASPase": [
+    "SASPase"
+  ],
+  "SCML1": [
+    "SCML1"
+  ],
+  "SGN1": [
+    "SGN1",
+    "Sgn1"
+  ],
+  "SHBG": [
+    "SHBG",
+    "sex hormone binding globulin"
+  ],
+  "SIAH1": [
+    "SIAH1"
+  ],
+  "SIM1": [
+    "SIM1"
+  ],
+  "SKP1": [
+    "SKP1"
+  ],
+  "SLCO1B1": [
+    "SLCO1B1"
+  ],
+  "SLCO1B3": [
+    "SLCO1B3"
+  ],
+  "Smac": [
+    "Smac"
+  ],
+  "Smad1": [
+    "Smad1"
+  ],
+  "SMCIB": [
+    "SMCIB"
+  ],
+  "SMARCAD1": [
+    "SMARCAD1"
+  ],
+  "SNP": [
+    "SNP"
+  ],
+  "SOX1": [
+    "SOX1"
+  ],
+  "SOX2": [
+    "Sox2"
+  ],
+  "SRD5A2": [
+    "SRD5A2"
+  ],
+  "Stra8": [
+    "Stra8"
+  ],
+  "Stroke": [
+    "stroke"
+  ],
+  "Sucrose": [
+    "Sucrose"
+  ],
+  "Spermatid": [
+    "spermatid",
+    "spermatids"
+  ],
+  "Spermatocytes": [
+    "spermatocytes"
+  ],
+  "Src": [
+    "Src"
+  ],
+  "SYNCYTIN": [
+    "SYNCYTIN",
+    "Syncytins"
+  ],
+  "SYCP1": [
+    "SYCPI"
+  ],
+  "SYCP3": [
+    "SYCP3"
+  ],
+  "Syncytin-A": [
+    "Syncytin-A",
+    "SyncytinA"
+  ],
+  "Syncytin-I": [
+    "Syncytin-I"
+  ],
+  "SyncytinB": [
+    "SyncytinB"
+  ],
+  "TACR3": [
+    "TACR3"
+  ],
+  "TBP6": [
+    "TBP6"
+  ],
+  "TCNI": [
+    "TCNI"
+  ],
+  "TET": [
+    "TET"
+  ],
+  "TEX11": [
+    "TEXII"
+  ],
+  "TEX29": [
+    "TEX29"
+  ],
+  "TFAP4": [
+    "TFAP4"
+  ],
+  "TGFB1": [
+    "TGFB1"
+  ],
+  "THADA": [
+    "THADA"
+  ],
+  "TNF": [
+    "TNF"
+  ],
+  "TNPB": [
+    "TnpB"
+  ],
+  "TPB1": [
+    "TPB1"
+  ],
+  "TPB2": [
+    "TPB2"
+  ],
+  "TP53": [
+    "TP53",
+    "p53"
+  ],
+  "TRAIL": [
+    "TRAIL"
+  ],
+  "TRIP13": [
+    "TRIP13"
+  ],
+  "TRPV1": [
+    "TRPV1"
+  ],
+  "Tex19.1": [
+    "Tex19.1"
+  ],
+  "Tf2": [
+    "Tf2"
+  ],
+  "Thermus thermophilus V/A-ATPase": [
+    "Thermus thermophilus V/A-ATPase"
+  ],
+  "Testis": [
+    "testis"
+  ],
+  "Testosterone": [
+    "Testosterone",
+    "testosterone"
+  ],
+  "Thyroid cancer": [
+    "thyroid cancer"
+  ],
+  "Transib": [
+    "Transib"
+  ],
+  "Type 2 diabetes": [
+    "T2D",
+    "Type 2 diabetes",
+    "type 2 diabetes"
+  ],
+  "Ty3/Gypsy": [
+    "Ty3",
+    "Ty3/Gypsy",
+    "Ty3/gypsy"
+  ],
+  "UBA1": [
+    "UBA1"
+  ],
+  "UBA52": [
+    "UBA52"
+  ],
+  "UBASH3A": [
+    "UBASH3A"
+  ],
+  "UBC": [
+    "UBC"
+  ],
+  "UBE2C": [
+    "UBE2C"
+  ],
+  "UBE2V2": [
+    "UBE2V2"
+  ],
+  "UBR1": [
+    "UBR1"
+  ],
+  "UTF1": [
+    "UTF1"
+  ],
+  "Ubiquitination": [
+    "ubiquitination"
+  ],
+  "Urate": [
+    "urate"
+  ],
+  "Utrophin": [
+    "Utrophin"
+  ],
+  "VEGFA": [
+    "VEGFA"
+  ],
+  "Virus-like particle": [
+    "Virus-like particle"
+  ],
+  "X-linked mental retardation": [
+    "X-linked mental retardation"
+  ],
+  "YTHDF3": [
+    "YTHDF3"
+  ],
+  "Ywhaz": [
+    "Ywhaz"
+  ],
+  "ZCCHC12": [
+    "ZCCHC12",
+    "ZCCHC12/18"
+  ],
+  "ZNF307": [
+    "ZNF307"
+  ],
+  "ZNF446": [
+    "ZNF446"
+  ],
+  "ZP2": [
+    "ZP2"
+  ],
+  "ZP3": [
+    "ZP3"
+  ],
+  "ZP4": [
+    "ZP4"
+  ],
+  "c-Jun": [
+    "c-Jun"
+  ],
+  "Cbh1": [
+    "Cbh1"
+  ],
+  "Cbh2": [
+    "Cbh2"
+  ],
+  "dArc1": [
+    "dArc1",
+    "darc1"
+  ],
+  "eIF4E": [
+    "eIF4E"
+  ],
+  "enJS56A1": [
+    "enJS56A1"
+  ],
+  "enJSRV-20": [
+    "enJSRV-20"
+  ],
+  "Ime2": [
+    "Ime2"
+  ],
+  "Ime4": [
+    "Ime4"
+  ],
+  "LdocI/Sirh7": [
+    "LdocI/Sirh7",
+    "Ldocl"
+  ],
+  "Lia5": [
+    "Lia5"
+  ],
+  "M1": [
+    "M1"
+  ],
+  "Ma2": [
+    "Ma2"
+  ],
+  "mRNA": [
+    "mRNA"
+  ],
+  "mGlur5": [
+    "mGlur5"
   ]
 }

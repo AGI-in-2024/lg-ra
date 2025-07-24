@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -17,12 +18,23 @@ export default function HomePage() {
       {/* Header */}
       <div className="border-b border-green-500 p-6 relative z-10">
         <div className="flex justify-between items-center">
-          <div>
-            <h1 className="text-4xl font-bold text-green-400 pixel-text mb-2">
-              ДЛЯ ПРОДЛЕНИЯ ЖИЗНИ
-            </h1>
-            <div className="text-lg text-green-300">
-              Мультиагентные системы против старости
+          <div className="flex items-center gap-6">
+            <div className="w-40 h-40 flex-shrink-0">
+              <Image 
+                src="/image.png" 
+                alt="Geronome Logo" 
+                width={160} 
+                height={160}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold text-green-400 pixel-text mb-2">
+                Мы учим машины понимать старение, чтобы человечество могло его остановить
+              </h1>
+              <div className="text-lg text-green-300">
+                Geronome — ии-система, которая анализирует биомедицинские данные, выявляет закономерности старения и помогает находить задачи, решение которых ведёт к долголетию
+              </div>
             </div>
           </div>
           <div className="w-12 h-12 border-2 border-green-400 rounded-full flex items-center justify-center">
