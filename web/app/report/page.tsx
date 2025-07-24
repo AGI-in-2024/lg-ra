@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface Critique {
   is_interesting: boolean;
@@ -142,19 +143,19 @@ export default function ReportPage() {
               ГРАФ ЗНАНИЙ
             </a>
             {uniquePapers.length > 0 && (
-              <a 
+              <Link 
                 href={`/graph?highlight=${uniquePapers.join(',')}&search=open`}
                 className="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-black font-bold rounded border-2 border-purple-400 transition-all duration-200"
               >
                 📊 ВСЕ СТАТЬИ В ГРАФЕ
-              </a>
+              </Link>
             )}
-            <a 
+            <Link 
               href="/"
               className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-black font-bold rounded border-2 border-blue-400 transition-all duration-200"
             >
               ГЛАВНАЯ
-            </a>
+            </Link>
           </div>
         </div>
       </div>

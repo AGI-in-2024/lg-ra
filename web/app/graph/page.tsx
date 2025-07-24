@@ -3,8 +3,9 @@
 import GraphVisualization from '../components/GraphVisualization';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function GraphPage() {
+function GraphContent() {
   const searchParams = useSearchParams();
   const focusNodeId = searchParams.get('focus');
   const highlightPapers = searchParams.get('highlight')?.split(',') || [];
@@ -49,4 +50,12 @@ export default function GraphPage() {
       </div>
     </div>
   );
-} 
+}
+
+export default function GraphPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-black text-green-400 font-mono flex items-center justify-center">Loading...</div>}>
+      <GraphContent />
+    </Suspense>
+  );
+}

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface GraphNode {
   id: string;
@@ -78,6 +78,48 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
       setLoading(false);
     }
   };
+
+  // Node styling functions
+  const getNodeColor = useCallback((node: GraphNode) => {
+    // Подсветка выбранного узла
+    if (selectedNode && selectedNode.id === node.id) {
+      return '#ffff00'; // Желтый для выбранного узла
+    }
+    
+    // Подсветка статей из отчета
+    if (highlightPapers.includes(node.id) || highlightPapers.includes(node.paper_id || '')) {
+      return '#ffd700'; // Золотой для подсвеченных статей
+    }
+    
+    switch (node.type) {
+      case 'Paper': return '#00ff00';
+      case 'Entity': return '#00ccff';
+      case 'Result': return '#ffaa00';
+      case 'Conclusion': return '#ff00aa';
+      default: return '#888888';
+    }
+  }, [selectedNode, highlightPapers]);
+
+  const getNodeSize = useCallback((node: GraphNode) => {
+    // Увеличенный размер для выбранного узла
+    if (selectedNode && selectedNode.id === node.id) {
+      switch (node.type) {
+        case 'Paper': return 18;
+        case 'Entity': return 14;
+        case 'Result': return 12;
+        case 'Conclusion': return 12;
+        default: return 10;
+      }
+    }
+    
+    switch (node.type) {
+      case 'Paper': return 12;
+      case 'Entity': return 8;
+      case 'Result': return 6;
+      case 'Conclusion': return 6;
+      default: return 5;
+    }
+  }, [selectedNode]);
 
   // Initialize D3 force simulation
   useEffect(() => {
@@ -256,7 +298,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
       simulation.stop();
     };
 
-  }, [graphData, focusNodeId]);
+  }, [graphData, focusNodeId, getNodeColor, getNodeSize, selectedNode]);
 
   // Обновление подсветки выбранного узла
   useEffect(() => {
@@ -272,7 +314,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
       .attr("stroke", (d: any) => selectedNode && selectedNode.id === d.id ? "#ffffff" : "#fff")
       .attr("stroke-width", (d: any) => selectedNode && selectedNode.id === d.id ? 3 : 1.5);
       
-  }, [selectedNode]);
+  }, [selectedNode, getNodeColor, getNodeSize]);
 
   // Обработка изменения размера окна
   useEffect(() => {
@@ -447,47 +489,6 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
     }
   };
 
-  const getNodeColor = (node: GraphNode) => {
-    // Подсветка выбранного узла
-    if (selectedNode && selectedNode.id === node.id) {
-      return '#ffff00'; // Желтый для выбранного узла
-    }
-    
-    // Подсветка статей из отчета
-    if (highlightPapers.includes(node.id) || highlightPapers.includes(node.paper_id || '')) {
-      return '#ffd700'; // Золотой для подсвеченных статей
-    }
-    
-    switch (node.type) {
-      case 'Paper': return '#00ff00';
-      case 'Entity': return '#00ccff';
-      case 'Result': return '#ffaa00';
-      case 'Conclusion': return '#ff00aa';
-      default: return '#888888';
-    }
-  };
-
-  const getNodeSize = (node: GraphNode) => {
-    // Увеличенный размер для выбранного узла
-    if (selectedNode && selectedNode.id === node.id) {
-      switch (node.type) {
-        case 'Paper': return 18;
-        case 'Entity': return 14;
-        case 'Result': return 12;
-        case 'Conclusion': return 12;
-        default: return 10;
-      }
-    }
-    
-    switch (node.type) {
-      case 'Paper': return 12;
-      case 'Entity': return 8;
-      case 'Result': return 6;
-      case 'Conclusion': return 6;
-      default: return 5;
-    }
-  };
-
   const getNodeLabel = (node: GraphNode) => {
     if (node.canonical_name) return node.canonical_name;
     if (node.name) return node.name;
@@ -512,7 +513,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
   };
 
   // Find connected nodes for selected node
-  const findConnectedNodes = (nodeId: string) => {
+  const findConnectedNodes = useCallback((nodeId: string) => {
     if (!graphData) return { incoming: [], outgoing: [] };
 
     const incoming: Array<{node: GraphNode, edge: GraphEdge}> = [];
@@ -533,7 +534,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
     });
 
     return { incoming, outgoing };
-  };
+  }, [graphData]);
 
   // Update connected nodes when selected node changes
   useEffect(() => {
@@ -543,10 +544,10 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
     } else {
       setConnectedNodes({ incoming: [], outgoing: [] });
     }
-  }, [selectedNode, graphData]);
+  }, [selectedNode, graphData, findConnectedNodes]);
 
   // Create local mini-graph
-  const createLocalGraph = () => {
+  const createLocalGraph = useCallback(() => {
     if (!selectedNode || !localGraphRef.current || !showLocalGraph) {
       return;
     }
@@ -740,14 +741,15 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
     setTimeout(() => {
       localSimulation.stop();
     }, 8000);
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedNode, showLocalGraph, connectedNodes, panelWidth, getNodeColor]);
 
   // Update local graph when connections change
   useEffect(() => {
     if (showLocalGraph) {
       createLocalGraph();
     }
-  }, [connectedNodes, showLocalGraph, selectedNode, panelWidth]);
+  }, [connectedNodes, showLocalGraph, selectedNode, panelWidth, createLocalGraph]);
 
   // Handle panel resizing
   useEffect(() => {
@@ -784,7 +786,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
   }, [isResizing]);
 
   // Focus on a specific node from connections
-  const focusOnNode = (nodeId: string) => {
+  const focusOnNode = useCallback((nodeId: string) => {
     const node = graphData?.nodes.find(n => n.id === nodeId);
     if (node && svgRef.current && zoomBehaviorRef.current) {
       const d3 = require('d3');
@@ -811,7 +813,7 @@ export default function GraphVisualization({ focusNodeId, highlightPapers = [], 
       setShowFullContent(false);
       setShowLocalGraph(false);
     }
-  };
+  }, [graphData]);
 
   if (loading) {
     return (
